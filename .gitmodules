@@ -1,0 +1,3 @@
+[submodule "private-configs"]
+	path = private-configs
+	url = https://github.com/ang3lo-azevedo/AIOStreams-private-configs
