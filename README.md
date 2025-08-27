@@ -10,6 +10,12 @@ This is a custom **[AIOStreams](https://github.com/reddravenn/AIOStreams)** conf
 - **[AIOStreams](https://github.com/reddravenn/AIOStreams)** - Advanced Stremio addon aggregator
 - **[Stremio](https://github.com/Stremio/stremio-shell)** - Modern media center and streaming platform
 
+### 🙏 Credits
+
+This configuration is **based on and inspired by** the excellent work of **[Tamtaro](https://discord.com/channels/1225024298490662974/1391478569607368924)** from the AIOStreams Discord community. The original configuration has been adapted and optimized for Portuguese/English content with additional customizations for public sharing.
+
+**Special thanks to Tamtaro** for creating the foundation that made this configuration possible!
+
 ## 🔐 Debrid Services
 
 ### Enabled
