@@ -1,6 +1,6 @@
 # AIOStreams Configuration
 
-![AIOStreams Configuration](https://github.com/user-attachments/assets/6f23909e-982f-4084-b3c6-173fbae12756)
+![AIOStreams Configuration](https://github.com/user-attachments/assets/d217038a-8bb5-473f-901a-8ee9b68c1561)
 
 ## 📋 Overview
 
@@ -160,6 +160,23 @@ The configuration includes a custom formatter that displays:
 4. **Portuguese**
 5. Japanese, Korean (for anime)
 
+### Visual Tags (Priority Order)
+1. **3D** - 3D content gets highest priority
+2. **IMAX** - IMAX enhanced versions prioritized
+3. **HDR+DV** - Dolby Vision with HDR (best HDR quality)
+4. **HDR10+** - Advanced HDR with dynamic metadata
+5. **HDR10** - Standard HDR10
+6. **DV** - Dolby Vision standard
+7. **DV Only** - Dolby Vision exclusive
+8. **HDR** - Generic HDR
+9. **HDR Only** - HDR exclusive content
+10. **10bit** - 10-bit color depth
+11. **AI** - AI-enhanced content
+12. **SDR** - Standard Dynamic Range
+13. **Unknown** - Unspecified visual quality
+
+> **Note**: This ordering ensures that **3D and IMAX content appears first** in stream lists, followed by the highest quality HDR formats. The configuration prioritizes immersive and enhanced viewing experiences.
+
 ## 🎯 Quality Patterns (Regex)
 
 The configuration includes sophisticated regex patterns to classify releases:
@@ -223,8 +240,13 @@ Automatically removes low-quality releases from groups known for poor quality.
 
 ### Option 1: With Real-Debrid (Recommended)
 1. **Import** the `aiostreams-config.json` file into AIOStreams
+![Import](https://github.com/user-attachments/assets/7c8a6f2a-08ba-4eb7-8452-1d11b0ebdaa7)
+
 2. **Configure** your **[Real-Debrid](https://real-debrid.com/)** credentials in Services
+![Configure](https://github.com/user-attachments/assets/ee4aaec4-6a75-45da-91bb-3899727093a4)
+
 3. **Install** the resulting addon in Stremio
+
 4. **Enjoy** optimized quality content with instant streaming!
 
 ### Option 2: Without Real-Debrid (Free Alternative)
@@ -246,6 +268,28 @@ Automatically removes low-quality releases from groups known for poor quality.
 - ⚠️ **Limited high-quality sources** - Fewer 4K/1080p options
 - ⚠️ **No instant playback** - Torrents need to buffer/download first
 - ⚠️ **ISP restrictions** - Some ISPs block P2P traffic
+
+### 🔑 Complete Setup (Recommended)
+
+For the **ultimate streaming experience**, consider also configuring these **premium addons** from the enhanced configurations:
+
+![AIOStreams Extra Addons](https://github.com/user-attachments/assets/9fc58235-3007-44aa-bad6-e1693188a61c)
+![AIOStreams Extra Addons](https://github.com/user-attachments/assets/81519ff6-009d-427d-adc3-9d323c54ff70)
+
+**Personal Tracking & Lists:**
+- **[AIOLists](https://github.com/SebastianMorel/AIOLists)** - Connect your Trakt account for personalized recommendations, watchlists, and trending content
+- **[SyncriBullet](https://github.com/aliyss/syncribullet)** - Sync across multiple platforms (Simkl, AniList, Kitsu, TVTime)
+- **[MAL-Stremio Addon](https://github.com/SageTendo/mal-stremio-addon)** - MyAnimeList integration for anime enthusiasts
+
+**Enhanced Metadata:**
+- **[AIOMetadata](https://github.com/cedya77/aiometadata)** - Rich movie/TV information with TMDB integration (I recommend [this setup](https://www.reddit.com/r/StremioAddons/comments/1mzqfgn/best_aio_metadata_setup_stable_clean_spoilerfree/))
+- **[Animeo](https://github.com/Jenrykster/animeo)** - Advanced anime discovery and tracking
+
+**IPTV Integration:**
+- **[M3U/EPG Addon](https://github.com/Inside4ndroid/M3U-XCAPI-EPG-IPTV-Stremio)** - Add your IPTV channels and live content
+
+**Why these aren't included:**
+These addons require **individual API keys, personal accounts, or private configurations** that each user must set up themselves. They cannot be shared in a public configuration due to security and terms of service restrictions.
 
 ## 📝 Notes
 
