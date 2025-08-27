@@ -161,10 +161,7 @@
           "stream"
         ],
         "includeP2P": true,
-        "removeTrash": true,
-        "services": [
-          "realdebrid"
-        ]
+        "removeTrash": true
       }
     },
     {
@@ -184,10 +181,7 @@
         "downloadViaBrowser": false,
         "contributorStreams": false,
         "certificationLevelsFilter": [],
-        "nudityFilter": [],
-        "services": [
-          "realdebrid"
-        ]
+        "nudityFilter": []
       }
     },
     {
@@ -239,9 +233,6 @@
           "torrent9",
           "ilcorsaronero",
           "manual"
-        ],
-        "services": [
-          "realdebrid"
         ],
         "includeP2P": true,
         "useMultipleInstances": false
