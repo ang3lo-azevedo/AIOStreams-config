@@ -39,7 +39,6 @@ This configuration is **based on and inspired by** the excellent work of **[Tamt
 - **Configuration**: 
   - Include P2P: Yes
   - Remove Trash: Yes
-  - Services: Real-Debrid
 - **Description**: Stream aggregator with intelligent filtering
 
 #### **[MediaFusion](https://mediafusion.elfhosted.com/)**
