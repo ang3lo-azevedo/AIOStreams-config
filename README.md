@@ -16,6 +16,8 @@ This configuration is **based on and inspired by** the excellent work of **[Tamt
 
 **Special thanks to Tamtaro** for creating the foundation that made this configuration possible!
 
+**Stream expressions and regex patterns** are sourced from **[Vidhin05/Releases-Regex](https://github.com/Vidhin05/Releases-Regex)**, providing comprehensive and up-to-date release group classifications for quality filtering.
+
 ## Available Versions
 
 This repository provides **four configuration versions** to suit different language preferences:
@@ -221,6 +223,9 @@ The configuration includes a custom formatter that displays:
 ## 🎯 Quality Patterns (Regex)
 
 The configuration includes sophisticated regex patterns to classify releases:
+
+### 📋 Source
+**Stream expressions and regex patterns** are based on **[Vidhin05/Releases-Regex](https://github.com/Vidhin05/Releases-Regex)**, providing comprehensive and up-to-date release group classifications.
 
 ### Anime (Classification T1-T8)
 - **T1**: Premium groups (Aergia, smol, SoM, Vodes, Legion)
