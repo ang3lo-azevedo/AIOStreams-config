@@ -291,10 +291,10 @@ Select the appropriate configuration file based on your language preferences:
 
 ### Option 1: With Real-Debrid (Recommended)
 1. **Import** your chosen configuration file into AIOStreams
-![Import](https://github.com/user-attachments/assets/7c8a6f2a-08ba-4eb7-8452-1d11b0ebdaa7)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/2aa6dbd8-3ebf-4d1e-bc6e-2edc7593fac6" />
 
 2. **Configure** your **[Real-Debrid](https://real-debrid.com/)** credentials in Services
-![Configure](https://github.com/user-attachments/assets/ee4aaec4-6a75-45da-91bb-3899727093a4)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/e04c4649-2507-49a8-a920-3ff977afabcc" />
 
 3. **Install** the resulting addon in Stremio
 
@@ -302,13 +302,14 @@ Select the appropriate configuration file based on your language preferences:
 
 ### Option 2: Without Real-Debrid (Free Alternative)
 1. **Import** the `aiostreams-config.json` file into AIOStreams
-![Import](https://github.com/user-attachments/assets/7c8a6f2a-08ba-4eb7-8452-1d11b0ebdaa7)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/0de680c8-6073-4b13-aefb-cb24dd840bc7" />
 
-2. **Keep Real-Debrid disabled** (or disable it in Services)
+2. **Disable Real-Debrid**
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/1e41d81a-6006-434f-a906-31ab889598c4" />
 
-3. **Install** the resulting addon in Stremio
+4. **Install** the resulting addon in Stremio
 
-4. **Stream content** using P2P torrents and direct links
+5. **Stream content** using P2P torrents and direct links
 
 #### What works without Real-Debrid:
 - ✅ **P2P Torrents** - Direct torrent streaming (requires good internet)
@@ -328,8 +329,8 @@ Select the appropriate configuration file based on your language preferences:
 
 For the **ultimate streaming experience**, consider also configuring these **premium addons** from the enhanced configurations:
 
-![AIOStreams Extra Addons](https://github.com/user-attachments/assets/9fc58235-3007-44aa-bad6-e1693188a61c)
-![AIOStreams Extra Addons](https://github.com/user-attachments/assets/81519ff6-009d-427d-adc3-9d323c54ff70)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/b6b20513-d8ba-4d08-8da5-a87f9dbcdd48" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/db217b34-653c-4bf9-b6ab-05cf42114d7e" />
 
 **Personal Tracking & Lists:**
 - **[AIOLists](https://github.com/SebastianMorel/AIOLists)** - Connect your Trakt account for personalized recommendations, watchlists, and trending content
