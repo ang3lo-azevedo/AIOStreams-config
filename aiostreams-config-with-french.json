@@ -132,7 +132,7 @@
           "stream"
         ],
         "includeP2P": true,
-        "removeTrash": true
+        "removeTrash": false
       }
     },
     {

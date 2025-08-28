@@ -106,6 +106,35 @@
       }
     },
     {
+      "type": "custom",
+      "instanceId": "ecd",
+      "enabled": true,
+      "options": {
+        "name": "Tugaflix",
+        "manifestUrl": "stremio://tugaflix.vercel.app/manifest.json",
+        "libraryAddon": false,
+        "formatPassthrough": false,
+        "resultPassthrough": true,
+        "forceToTop": false,
+        "timeout": 15000,
+        "resources": []
+      }
+    },
+    {
+      "type": "custom",
+      "instanceId": "332",
+      "enabled": true,
+      "options": {
+        "name": "TugaKids",
+        "manifestUrl": "https://e1d6cc1ff4a7-tugakids-stremio.baby-beamup.club/%7B%22tk%22:%226c6b4ccf00da7461963cd3d01997c2bf47b14430402073f4f1%22%7D/manifest.json",
+        "libraryAddon": false,
+        "resultPassthrough": true,
+        "forceToTop": false,
+        "timeout": 15000,
+        "resources": []
+      }
+    },
+    {
       "type": "torrentio",
       "instanceId": "3d1",
       "enabled": true,
@@ -211,6 +240,34 @@
     },
     {
       "type": "custom",
+      "instanceId": "949",
+      "enabled": true,
+      "options": {
+        "name": "Brazuca Torrents",
+        "manifestUrl": "https://94c8cb9f702d-brazuca-torrents.baby-beamup.club/manifest.json",
+        "libraryAddon": false,
+        "resultPassthrough": false,
+        "forceToTop": true,
+        "timeout": 15000,
+        "resources": []
+      }
+    },
+    {
+      "type": "custom",
+      "instanceId": "4e5",
+      "enabled": true,
+      "options": {
+        "name": "Reflux",
+        "manifestUrl": "https://rx.postclub.me/manifest.json",
+        "libraryAddon": false,
+        "resultPassthrough": false,
+        "forceToTop": false,
+        "timeout": 15000,
+        "resources": []
+      }
+    },
+    {
+      "type": "custom",
       "instanceId": "acc",
       "enabled": true,
       "options": {
@@ -225,11 +282,25 @@
     },
     {
       "type": "custom",
-      "instanceId": "7da",
+      "instanceId": "769",
       "enabled": true,
       "options": {
+        "name": "Minha TV",
+        "manifestUrl": "https://da5f663b4690-minhatv.baby-beamup.club/manifest.json",
+        "libraryAddon": false,
+        "resultPassthrough": false,
+        "forceToTop": false,
+        "timeout": 15000,
+        "resources": []
+      }
+    },
+    {
+      "type": "custom",
+      "instanceId": "7da",
+      "enabled": false,
+      "options": {
         "name": "TvVoo",
-        "manifestUrl": " https://9aa032f52161-tvvoo.baby-beamup.club/cfg-uk/manifest.json",
+        "manifestUrl": "https://9aa032f52161-tvvoo.baby-beamup.club/cfg-uk-pt/manifest.json",
         "libraryAddon": false,
         "resultPassthrough": false,
         "forceToTop": false,
@@ -274,6 +345,7 @@
           "subtitles"
         ],
         "language": [
+          "pm",
           "en"
         ],
         "sources": "all",
@@ -292,7 +364,9 @@
           "subtitles"
         ],
         "language": [
-          "English"
+          "English",
+          "Portuguese",
+          "Brazillian Portuguese"
         ],
         "hearingImpairment": "hiInclude"
       }
@@ -308,7 +382,9 @@
           "subtitles"
         ],
         "languages": [
-          "en"
+          "en",
+          "pt",
+          "pb"
         ]
       }
     },
@@ -323,7 +399,8 @@
           "subtitles"
         ],
         "languages": [
-          "english"
+          "english",
+          "portuguese"
         ],
         "microsoftTranslatorRegion": "global"
       }
@@ -385,6 +462,10 @@
         "direction": "desc"
       },
       {
+        "key": "language",
+        "direction": "desc"
+      },
+      {
         "key": "quality",
         "direction": "desc"
       },
@@ -409,10 +490,6 @@
         "direction": "desc"
       },
       {
-        "key": "language",
-        "direction": "desc"
-      },
-      {
         "key": "size",
         "direction": "desc"
       },
@@ -428,6 +505,10 @@
       },
       {
         "key": "library",
+        "direction": "desc"
+      },
+      {
+        "key": "language",
         "direction": "desc"
       },
       {
@@ -447,14 +528,11 @@
         "direction": "desc"
       },
       {
-        "key": "language",
-        "direction": "desc"
-      },
-      {
         "key": "size",
         "direction": "desc"
       }
-    ]
+    ],
+    "anime": []
   },
   "deduplicator": {
     "enabled": true,
@@ -482,6 +560,7 @@
   "includedLanguages": [],
   "requiredLanguages": [],
   "preferredLanguages": [
+    "Portuguese",
     "English",
     "Dual Audio",
     "Multi",
@@ -759,16 +838,124 @@
       "addonName": "Sagas and Marathons"
     },
     {
-      "id": "7dae3b0.vavoo_tv_uk",
-      "type": "tv",
-      "name": "Vavoo TV • United Kingdom",
+      "id": "332e3b0.tugakids-movies",
+      "type": "movie",
+      "name": "Animação em PT-PT",
       "shuffle": false,
-      "onlyOnDiscover": false,
+      "enabled": true,
+      "rpdb": false,
+      "overrideType": "movie",
+      "hideable": true,
+      "searchable": true,
+      "addonName": "TugaKids"
+    },
+    {
+      "id": "4e5e3b0.reflux.ALL",
+      "type": "movie",
+      "name": "Reflux - Todos",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.POPULAR",
+      "type": "movie",
+      "name": "Reflux - Em alta",
+      "shuffle": false,
+      "onlyOnDiscover": true,
       "enabled": true,
       "rpdb": false,
       "hideable": true,
       "searchable": false,
-      "addonName": "TvVoo"
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.TOP_RATED",
+      "type": "movie",
+      "name": "Reflux - Mais avaliados",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.THEATHER",
+      "type": "movie",
+      "name": "Reflux - Lançamentos",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.ALL",
+      "type": "series",
+      "name": "Reflux - Todos",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.POPULAR",
+      "type": "series",
+      "name": "Reflux - Em alta",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.TOP_RATED",
+      "type": "series",
+      "name": "Reflux - Mais avaliados",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.THEATHER",
+      "type": "series",
+      "name": "Reflux - Lançamentos",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "769e3b0.minhatv_channels",
+      "type": "tv",
+      "name": "Minha TV",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Minha TV"
     },
     {
       "id": "f87e3b0.all",

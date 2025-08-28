@@ -18,13 +18,20 @@ This configuration is **based on and inspired by** the excellent work of **[Tamt
 
 ## Available Versions
 
-This repository provides **three configuration versions** to suit different language preferences:
+This repository provides **four configuration versions** to suit different language preferences:
 
 ### 🇵🇹 English + Portuguese Version
 - **File**: [`aiostreams-config-with-portuguese.json`](./aiostreams-config-with-portuguese.json) (main configuration)
 - **Content**: Full configuration with both English and Portuguese addons
 - **Includes**: Tugaflix, TugaKids, Reflux, Minha TV, TvVoo and other Portuguese content sources
 - **Best for**: Users who want access to both English and Portuguese content
+
+### 🇧🇷 Brazilian Portuguese + English Version
+- **File**: [`aiostreams-config-brazilian-portuguese.json`](./aiostreams-config-brazilian-portuguese.json)
+- **Content**: Configuration optimized for Brazilian Portuguese content with English support
+- **Includes**: Brazuca Torrents, Reflux, Tugaflix, Brazilian subtitle support (PT-BR), and TvVoo disabled
+- **Language Priority**: Portuguese first, then English
+- **Best for**: Brazilian users who prefer Portuguese content but want English as backup
 
 ### 🇺🇸 English Only Version  
 - **File**: [`aiostreams-config-english-only.json`](./aiostreams-config-english-only.json)
@@ -62,7 +69,6 @@ All versions include the same high-quality streaming addons (Torrentio, Comet, M
 - **Resources**: Stream
 - **Configuration**: 
   - Include P2P: Yes
-  - Remove Trash: Yes
 - **Description**: Stream aggregator with intelligent filtering
 
 #### **[MediaFusion](https://mediafusion.elfhosted.com/)**
@@ -98,6 +104,12 @@ All versions include the same high-quality streaming addons (Torrentio, Comet, M
 #### **[Reflux](https://github.com/Nightfruit/reflux)**
 - **Status**: ✅ Enabled
 - **Description**: Brazilian catalog with movies and series
+
+#### **[Brazuca Torrents](https://stremio-addons.com/brazuca-torrents.html)**
+- **Status**: ✅ Enabled (Portuguese and Brazilian Portuguese versions)
+- **Configuration**: `forceToTop: true` (maximum priority on Brazilian version)
+- **Description**: Brazilian torrent sources with Portuguese content
+- **Content**: Focused on Brazilian Portuguese movies and series
 
 ### 🔍 Search and Metadata Addons
 

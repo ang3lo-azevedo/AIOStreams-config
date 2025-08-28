@@ -161,7 +161,7 @@
           "stream"
         ],
         "includeP2P": true,
-        "removeTrash": true
+        "removeTrash": false
       }
     },
     {
@@ -240,6 +240,20 @@
     },
     {
       "type": "custom",
+      "instanceId": "949",
+      "enabled": true,
+      "options": {
+        "name": "Brazuca Torrents",
+        "manifestUrl": "https://94c8cb9f702d-brazuca-torrents.baby-beamup.club/manifest.json",
+        "libraryAddon": false,
+        "resultPassthrough": false,
+        "forceToTop": false,
+        "timeout": 15000,
+        "resources": []
+      }
+    },
+    {
+      "type": "custom",
       "instanceId": "4e5",
       "enabled": true,
       "options": {
@@ -283,7 +297,7 @@
     {
       "type": "custom",
       "instanceId": "7da",
-      "enabled": true,
+      "enabled": false,
       "options": {
         "name": "TvVoo",
         "manifestUrl": "https://9aa032f52161-tvvoo.baby-beamup.club/cfg-uk-pt/manifest.json",
@@ -929,29 +943,6 @@
       "hideable": true,
       "searchable": false,
       "addonName": "Reflux"
-    },
-    {
-      "id": "7dae3b0.vavoo_tv_pt",
-      "type": "tv",
-      "name": "Vavoo TV • Portugal",
-      "shuffle": false,
-      "enabled": true,
-      "rpdb": false,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "TvVoo"
-    },
-    {
-      "id": "7dae3b0.vavoo_tv_uk",
-      "type": "tv",
-      "name": "Vavoo TV • United Kingdom",
-      "shuffle": false,
-      "onlyOnDiscover": true,
-      "enabled": true,
-      "rpdb": false,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "TvVoo"
     },
     {
       "id": "769e3b0.minhatv_channels",
