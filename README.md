@@ -1,6 +1,6 @@
 # AIOStreams Configuration
 
-![AIOStreams Configuration](https://github.com/user-attachments/assets/d217038a-8bb5-473f-901a-8ee9b68c1561)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/71f73d6c-365d-4390-8149-eadfa4eaaf63" />
 
 ## 📋 Overview
 
