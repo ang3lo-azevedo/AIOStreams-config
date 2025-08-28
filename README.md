@@ -34,7 +34,7 @@ This repository provides **two configuration versions** to suit different langua
 
 Both versions include the same high-quality streaming addons (Torrentio, Comet, MediaFusion, etc.) and quality preferences, differing only in language-specific content sources.
 
-## �🔐 Debrid Services
+## 🔐 Debrid Services
 
 ### Enabled
 - **[Real-Debrid](https://real-debrid.com/)** ✅ - Primary service for converting torrents to direct links
@@ -65,7 +65,7 @@ Both versions include the same high-quality streaming addons (Torrentio, Comet, 
 - **Timeout**: 5000ms (optimized for speed)
 - **Description**: Streams with enriched metadata
 
-#### **StremThru Torz**
+#### **[StremThru Torz](https://stremthru.elfhosted.com/stremio/torz/)**
 - **Status**: ✅ Enabled
 - **Resources**: Stream
 - **Configuration**: P2P enabled, single instance
@@ -84,7 +84,7 @@ Both versions include the same high-quality streaming addons (Torrentio, Comet, 
 - **Configuration**: `forceToTop: true` (maximum priority)
 - **Description**: High-quality Portuguese content
 
-#### **TugaKids** 
+#### **[TugaKids](https://e1d6cc1ff4a7-tugakids-stremio.baby-beamup.club/configure/)** 
 - **Status**: ✅ Enabled
 - **Configuration**: `forceToTop: true`
 - **Description**: Animation and children's content in PT-PT
@@ -145,10 +145,10 @@ Both versions include the same high-quality streaming addons (Torrentio, Comet, 
 - **Status**: Disabled
 - **Reason**: SubHero offers better quality
 
-#### **SubSource** ❌ 
+#### **[SubSource](https://stremio-addons.com/subsource-subtitles.html)** ❌ 
 - **Status**: Disabled
 
-#### **AIOSubtitle** ❌
+#### **[AIOSubtitle](https://stremio-addons.com/aio-substitle.html)** ❌
 - **Status**: Disabled
 
 ## 🎨 Custom Formatting
@@ -323,7 +323,7 @@ For the **ultimate streaming experience**, consider also configuring these **pre
 **Why these aren't included:**
 These addons require **individual API keys, personal accounts, or private configurations** that each user must set up themselves. They cannot be shared in a public configuration due to security and terms of service restrictions.
 
-## �️ Recommended Usage
+## Recommended Usage
 
 ### Windows (Recommended)
 For **Windows users**, the recommended setup is:
@@ -338,7 +338,7 @@ For **Linux users**, the recommended setup is:
 ### Alternative Setup (Windows/Linux)
 **Windows users** can also use the **Linux setup** (Stremio Web + MPV userscript). The MPV configuration scripts can also be used with Stremio Community for enhanced playback.
 
-## �📝 Notes
+## 📝 Notes
 
 - Configuration **optimized for Real-Debrid** but **works without it**
 - **With Real-Debrid**: Instant premium streaming with maximum quality
