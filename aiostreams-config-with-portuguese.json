@@ -931,6 +931,29 @@
       "addonName": "Reflux"
     },
     {
+      "id": "7dae3b0.vavoo_tv_pt",
+      "type": "tv",
+      "name": "Vavoo TV • Portugal",
+      "shuffle": false,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "TvVoo"
+    },
+    {
+      "id": "7dae3b0.vavoo_tv_uk",
+      "type": "tv",
+      "name": "Vavoo TV • United Kingdom",
+      "shuffle": false,
+      "onlyOnDiscover": true,
+      "enabled": true,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "TvVoo"
+    },
+    {
       "id": "769e3b0.minhatv_channels",
       "type": "tv",
       "name": "Minha TV",
@@ -955,34 +978,11 @@
       "addonName": "USA TV"
     },
     {
-      "id": "7dae3b0.vavoo_tv_uk",
-      "type": "tv",
-      "name": "Vavoo TV • United Kingdom",
-      "shuffle": false,
-      "onlyOnDiscover": true,
-      "enabled": true,
-      "rpdb": false,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "TvVoo"
-    },
-    {
-      "id": "7dae3b0.vavoo_tv_pt",
-      "type": "tv",
-      "name": "Vavoo TV • Portugal",
-      "shuffle": false,
-      "enabled": true,
-      "rpdb": false,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "TvVoo"
-    },
-    {
       "id": "acce3b0.yt_id::ytsearch",
-      "name": "Mixed",
       "type": "YouTube",
-      "enabled": true,
+      "name": "Mixed",
       "shuffle": false,
+      "enabled": true,
       "rpdb": false,
       "hideable": false,
       "searchable": false,
@@ -990,10 +990,10 @@
     },
     {
       "id": "acce3b0.yt_id::ytsearch:video",
-      "name": "Video",
       "type": "YouTube",
-      "enabled": true,
+      "name": "Video",
       "shuffle": false,
+      "enabled": true,
       "rpdb": false,
       "hideable": false,
       "searchable": false,
@@ -1001,10 +1001,10 @@
     },
     {
       "id": "acce3b0.yt_id::ytsearch:channel",
-      "name": "Channel",
       "type": "YouTube",
-      "enabled": true,
+      "name": "Channel",
       "shuffle": false,
+      "enabled": true,
       "rpdb": false,
       "hideable": false,
       "searchable": false,
