@@ -20,7 +20,7 @@ This configuration is **based on and inspired by** the excellent work of **[Tamt
 
 This repository provides **three configuration versions** to suit different language preferences:
 
-### 🌍 English + Portuguese Version
+### 🇵🇹 English + Portuguese Version
 - **File**: [`aiostreams-config-with-portuguese.json`](./aiostreams-config-with-portuguese.json) (main configuration)
 - **Content**: Full configuration with both English and Portuguese addons
 - **Includes**: Tugaflix, TugaKids, Reflux, Minha TV, TvVoo and other Portuguese content sources
