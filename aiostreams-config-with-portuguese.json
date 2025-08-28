@@ -955,39 +955,6 @@
       "addonName": "USA TV"
     },
     {
-      "id": "acce3b0.yt_id::ytsearch",
-      "type": "mixed",
-      "name": "YouTube",
-      "shuffle": false,
-      "enabled": true,
-      "rpdb": false,
-      "hideable": false,
-      "searchable": false,
-      "addonName": "Youtubio"
-    },
-    {
-      "id": "acce3b0.yt_id::ytsearch:video",
-      "type": "movie",
-      "name": "YouTube",
-      "shuffle": false,
-      "enabled": true,
-      "rpdb": false,
-      "hideable": false,
-      "searchable": false,
-      "addonName": "Youtubio"
-    },
-    {
-      "id": "acce3b0.yt_id::ytsearch:channel",
-      "type": "channel",
-      "name": "YouTube",
-      "shuffle": false,
-      "enabled": true,
-      "rpdb": false,
-      "hideable": false,
-      "searchable": false,
-      "addonName": "Youtubio"
-    },
-    {
       "id": "7dae3b0.vavoo_tv_uk",
       "type": "tv",
       "name": "Vavoo TV • United Kingdom",
@@ -1009,6 +976,39 @@
       "hideable": true,
       "searchable": false,
       "addonName": "TvVoo"
+    },
+    {
+      "id": "acce3b0.yt_id::ytsearch",
+      "name": "Mixed",
+      "type": "YouTube",
+      "enabled": true,
+      "shuffle": false,
+      "rpdb": false,
+      "hideable": false,
+      "searchable": false,
+      "addonName": "Youtubio"
+    },
+    {
+      "id": "acce3b0.yt_id::ytsearch:video",
+      "name": "Video",
+      "type": "YouTube",
+      "enabled": true,
+      "shuffle": false,
+      "rpdb": false,
+      "hideable": false,
+      "searchable": false,
+      "addonName": "Youtubio"
+    },
+    {
+      "id": "acce3b0.yt_id::ytsearch:channel",
+      "name": "Channel",
+      "type": "YouTube",
+      "enabled": true,
+      "shuffle": false,
+      "rpdb": false,
+      "hideable": false,
+      "searchable": false,
+      "addonName": "Youtubio"
     }
   ],
   "externalDownloads": false

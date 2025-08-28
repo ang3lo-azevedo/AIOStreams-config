@@ -4,11 +4,11 @@
 
 ## 📋 Overview
 
-This is a custom **[AIOStreams](https://github.com/reddravenn/AIOStreams)** configuration for **[Stremio](https://github.com/Stremio/stremio-shell)**, optimized for Portuguese and English content with a focus on high quality. The configuration uses Real-Debrid as the primary debrid service and includes a carefully selected collection of addons for maximum compatibility and quality.
+This is a custom **[AIOStreams](https://github.com/Viren070/AIOStreams)** configuration for **[Stremio](https://www.stremio.com/)**, optimized for Portuguese and English content with a focus on high quality. The configuration uses Real-Debrid as the primary debrid service and includes a carefully selected collection of addons for maximum compatibility and quality.
 
 ### 🔗 Related Projects
-- **[AIOStreams](https://github.com/reddravenn/AIOStreams)** - Advanced Stremio addon aggregator
-- **[Stremio](https://github.com/Stremio/stremio-shell)** - Modern media center and streaming platform
+- **[AIOStreams](https://github.com/Viren070/AIOStreams)** - Advanced Stremio addon aggregator
+- **[Stremio](https://www.stremio.com/)** - Modern media center and streaming platform
 
 ### 🙏 Credits
 
@@ -16,7 +16,25 @@ This configuration is **based on and inspired by** the excellent work of **[Tamt
 
 **Special thanks to Tamtaro** for creating the foundation that made this configuration possible!
 
-## 🔐 Debrid Services
+## � Available Versions
+
+This repository provides **two configuration versions** to suit different language preferences:
+
+### 🌍 English + Portuguese Version
+- **File**: `aiostreams-config-with-portuguese.json` (main configuration)
+- **Content**: Full configuration with both English and Portuguese addons
+- **Includes**: Tugaflix, TugaKids, Reflux, Minha TV, TvVoo and other Portuguese content sources
+- **Best for**: Users who want access to both English and Portuguese content
+
+### 🇺🇸 English Only Version  
+- **File**: `aiostreams-config-english-only.json`
+- **Content**: Streamlined configuration with only English language addons
+- **Excludes**: Portuguese-specific addons (Tugaflix, TugaKids, Reflux, Portuguese TV channels)
+- **Best for**: Users who only consume English content and prefer a cleaner setup
+
+Both versions include the same high-quality streaming addons (Torrentio, Comet, MediaFusion, etc.) and quality preferences, differing only in language-specific content sources.
+
+## �🔐 Debrid Services
 
 ### Enabled
 - **[Real-Debrid](https://real-debrid.com/)** ✅ - Primary service for converting torrents to direct links
@@ -243,8 +261,13 @@ Automatically removes low-quality releases from groups known for poor quality.
 
 ## 🚀 How to Use
 
+### Step 1: Choose Your Configuration
+Select the appropriate configuration file based on your language preferences:
+- **`aiostreams-config-with-portuguese.json`** - Full configuration with English + Portuguese addons
+- **`aiostreams-config-english-only.json`** - Streamlined configuration with English addons only
+
 ### Option 1: With Real-Debrid (Recommended)
-1. **Import** the `aiostreams-config.json` file into AIOStreams
+1. **Import** your chosen configuration file into AIOStreams
 ![Import](https://github.com/user-attachments/assets/7c8a6f2a-08ba-4eb7-8452-1d11b0ebdaa7)
 
 2. **Configure** your **[Real-Debrid](https://real-debrid.com/)** credentials in Services
@@ -256,8 +279,12 @@ Automatically removes low-quality releases from groups known for poor quality.
 
 ### Option 2: Without Real-Debrid (Free Alternative)
 1. **Import** the `aiostreams-config.json` file into AIOStreams
+![Import](https://github.com/user-attachments/assets/7c8a6f2a-08ba-4eb7-8452-1d11b0ebdaa7)
+
 2. **Keep Real-Debrid disabled** (or disable it in Services)
+
 3. **Install** the resulting addon in Stremio
+
 4. **Stream content** using P2P torrents and direct links
 
 #### What works without Real-Debrid:
@@ -296,7 +323,22 @@ For the **ultimate streaming experience**, consider also configuring these **pre
 **Why these aren't included:**
 These addons require **individual API keys, personal accounts, or private configurations** that each user must set up themselves. They cannot be shared in a public configuration due to security and terms of service restrictions.
 
-## 📝 Notes
+## �️ Recommended Usage
+
+### Windows (Recommended)
+For **Windows users**, the recommended setup is:
+- **[Stremio Community v5](https://github.com/Zaarrg/stremio-community-v5)** - Enhanced Stremio client with additional features
+
+### Linux (Recommended)
+For **Linux users**, the recommended setup is:
+- **[Stremio Web](https://web.stremio.com)** - Official web version
+- **[Open Stremio Links on MPV](https://github.com/ang3lo-azevedo/open-stremio-links-on-mpv)** - Userscript that opens stream links directly in MPV
+- **[MPV Configuration](https://github.com/ang3lo-azevedo/mpv)** - Optimized MPV settings for best streaming experience
+
+### Alternative Setup (Windows/Linux)
+**Windows users** can also use the **Linux setup** (Stremio Web + MPV userscript). The MPV configuration scripts can also be used with Stremio Community for enhanced playback.
+
+## �📝 Notes
 
 - Configuration **optimized for Real-Debrid** but **works without it**
 - **With Real-Debrid**: Instant premium streaming with maximum quality
