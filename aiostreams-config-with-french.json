@@ -229,7 +229,7 @@
       "enabled": true,
       "options": {
         "name": "TvVoo",
-        "manifestUrl": " https://9aa032f52161-tvvoo.baby-beamup.club/cfg-uk/manifest.json",
+        "manifestUrl": " https://9aa032f52161-tvvoo.baby-beamup.club/cfg-uk-fr/manifest.json",
         "libraryAddon": false,
         "resultPassthrough": false,
         "forceToTop": false,
@@ -274,7 +274,8 @@
           "subtitles"
         ],
         "language": [
-          "en"
+          "en",
+          "fr"
         ],
         "sources": "all",
         "includeAiTranslated": true,
@@ -292,7 +293,10 @@
           "subtitles"
         ],
         "language": [
-          "English"
+          "English",
+          "French",
+          "French (Canada)",
+          "French (France)"
         ],
         "hearingImpairment": "hiInclude"
       }
@@ -308,7 +312,8 @@
           "subtitles"
         ],
         "languages": [
-          "en"
+          "en",
+          "fr"
         ]
       }
     },
@@ -323,7 +328,8 @@
           "subtitles"
         ],
         "languages": [
-          "english"
+          "english",
+          "french"
         ],
         "microsoftTranslatorRegion": "global"
       }
@@ -488,6 +494,7 @@
     "Dubbed",
     "Japanese",
     "Korean",
+    "French",
     "Unknown"
   ],
   "includedVisualTags": [],
@@ -759,11 +766,22 @@
       "addonName": "Sagas and Marathons"
     },
     {
+      "id": "7dae3b0.vavoo_tv_fr",
+      "name": "Vavoo TV • France",
+      "type": "tv",
+      "enabled": true,
+      "shuffle": false,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "TvVoo"
+    },
+    {
       "id": "7dae3b0.vavoo_tv_uk",
       "type": "tv",
       "name": "Vavoo TV • United Kingdom",
       "shuffle": false,
-      "onlyOnDiscover": false,
+      "onlyOnDiscover": true,
       "enabled": true,
       "rpdb": false,
       "hideable": true,

@@ -16,12 +16,12 @@ This configuration is **based on and inspired by** the excellent work of **[Tamt
 
 **Special thanks to Tamtaro** for creating the foundation that made this configuration possible!
 
-## � Available Versions
+## Available Versions
 
-This repository provides **two configuration versions** to suit different language preferences:
+This repository provides **three configuration versions** to suit different language preferences:
 
 ### 🌍 English + Portuguese Version
-- **File**: `aiostreams-config-with-portuguese.json` (main configuration)
+- **File**: `aiostreams-config.json` (main configuration)
 - **Content**: Full configuration with both English and Portuguese addons
 - **Includes**: Tugaflix, TugaKids, Reflux, Minha TV, TvVoo and other Portuguese content sources
 - **Best for**: Users who want access to both English and Portuguese content
@@ -32,7 +32,13 @@ This repository provides **two configuration versions** to suit different langua
 - **Excludes**: Portuguese-specific addons (Tugaflix, TugaKids, Reflux, Portuguese TV channels)
 - **Best for**: Users who only consume English content and prefer a cleaner setup
 
-Both versions include the same high-quality streaming addons (Torrentio, Comet, MediaFusion, etc.) and quality preferences, differing only in language-specific content sources.
+### 🇫🇷 English + French Version
+- **File**: `aiostreams-config-with-french.json`
+- **Content**: Configuration optimized for English and French content
+- **Includes**: TvVoo (France + UK), French subtitle support, and French torrent sources
+- **Best for**: French-speaking users who want both English and French content
+
+All versions include the same high-quality streaming addons (Torrentio, Comet, MediaFusion, etc.) and quality preferences, differing only in language-specific content sources and subtitle configurations.
 
 ## 🔐 Debrid Services
 
