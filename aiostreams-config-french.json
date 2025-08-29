@@ -229,7 +229,7 @@
       "enabled": true,
       "options": {
         "name": "TvVoo",
-        "manifestUrl": " https://9aa032f52161-tvvoo.baby-beamup.club/cfg-uk-fr/manifest.json",
+        "manifestUrl": "https://tvvoo.hayd.uk/cfg-uk-fr/manifest.json",
         "libraryAddon": false,
         "resultPassthrough": false,
         "forceToTop": false,
