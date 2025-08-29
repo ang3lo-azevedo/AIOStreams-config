@@ -449,6 +449,14 @@
     "series": [],
     "cached": [
       {
+        "key": "streamExpressionMatched",
+        "direction": "desc"
+      },
+      {
+        "key": "keyword",
+        "direction": "desc"
+      },
+      {
         "key": "resolution",
         "direction": "desc"
       },
@@ -495,6 +503,14 @@
     ],
     "uncached": [
       {
+        "key": "streamExpressionMatched",
+        "direction": "desc"
+      },
+      {
+        "key": "keyword",
+        "direction": "desc"
+      },
+      {
         "key": "resolution",
         "direction": "desc"
       },
@@ -526,7 +542,8 @@
         "key": "size",
         "direction": "desc"
       }
-    ]
+    ],
+    "cachedMovies": []
   },
   "deduplicator": {
     "enabled": true,
@@ -602,7 +619,10 @@
     "Portuguese",
     "Unknown"
   ],
-  "includedVisualTags": [],
+  "includedVisualTags": [
+    "3D",
+    "IMAX"
+  ],
   "requiredVisualTags": [],
   "excludedAudioTags": [],
   "includedAudioTags": [],
@@ -1017,5 +1037,12 @@
   "includedRegexPatterns": [
     "/\\b(3d|sbs|half[ .-]ou|half[ .-]sbs|BluRay3D|BD3D|3D\\.BluRay|3D\\.BLURAY|3D\\.BD|MVC|H-SBS|H-TAB|anaglyphic|stereoscopic|side\\.by\\.side|top\\.and\\.bottom|TAB|frame\\.packed|frame\\.packing|3D\\.HSBS|3D\\.HOU|3D\\.TAB|3D\\.FP)\\b/i",
     "/\\b(IMAX|Imax|imax|IMAX\\.Enhanced|IMAX\\.ENHANCED|IMAX\\.DMR|DMR|IMAX\\.Remastered|IMAX\\.REMASTERED|Enhanced\\.for\\.IMAX|ENHANCED\\.FOR\\.IMAX)\\b/i"
-  ]
+  ],
+  "includedKeywords": [
+    "3D",
+    "IMAX",
+    "3d",
+    "imax"
+  ],
+  "preferredKeywords": []
 }

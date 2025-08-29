@@ -454,6 +454,14 @@
     "series": [],
     "cached": [
       {
+        "key": "streamExpressionMatched",
+        "direction": "desc"
+      },
+      {
+        "key": "keyword",
+        "direction": "desc"
+      },
+      {
         "key": "resolution",
         "direction": "desc"
       },
@@ -499,6 +507,14 @@
       }
     ],
     "uncached": [
+      {
+        "key": "streamExpressionMatched",
+        "direction": "desc"
+      },
+      {
+        "key": "keyword",
+        "direction": "desc"
+      },
       {
         "key": "resolution",
         "direction": "desc"
