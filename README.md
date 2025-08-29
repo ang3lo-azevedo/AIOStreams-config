@@ -218,8 +218,6 @@ The configuration includes a custom formatter that displays:
 12. **SDR** - Standard Dynamic Range
 13. **Unknown** - Unspecified visual quality
 
-> **Note**: This ordering ensures that **3D and IMAX content appears first** in stream lists, followed by the highest quality HDR formats. The configuration prioritizes immersive and enhanced viewing experiences.
-
 ## 🎯 Quality Patterns (Regex)
 
 The configuration includes sophisticated regex patterns to classify releases:

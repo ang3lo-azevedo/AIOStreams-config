@@ -771,6 +771,10 @@
     "merge(count(cached(resolution(quality(streams,'Bluray REMUX'),'2160p'))) > 2 ? slice(resolution(quality(streams,'Bluray REMUX'),'2160p'), 2) : [], count(cached(resolution(quality(streams,'Bluray REMUX'),'1440p','1080p'))) > 2 ? slice(resolution(quality(streams,'Bluray REMUX'),'1440p','1080p'), 2) : [], count(cached(resolution(quality(streams,'Bluray REMUX'),'720p','Unknown'))) > 2 ? slice(resolution(quality(streams,'Bluray REMUX'),'720p','Unknown'), 2) : [], count(cached(resolution(quality(streams,'Bluray'),'2160p'))) > 2 ? slice(resolution(quality(streams,'Bluray'),'2160p'), 2) : [], count(cached(resolution(quality(streams,'Bluray'),'1440p','1080p'))) > 2 ? slice(resolution(quality(streams,'Bluray'),'1440p','1080p'), 2) : [], count(cached(resolution(quality(streams,'Bluray'),'720p','Unknown'))) > 2 ? slice(resolution(quality(streams,'Bluray'),'720p','Unknown'), 2) : [], count(cached(resolution(quality(streams,'WEB-DL'),'2160p'))) > 2 ? slice(resolution(quality(streams,'WEB-DL'),'2160p'), 2) : [], count(cached(resolution(quality(streams,'WEB-DL'),'1440p','1080p'))) > 2 ? slice(resolution(quality(streams,'WEB-DL'),'1440p','1080p'), 2) : [], count(cached(resolution(quality(streams,'WEB-DL'),'720p','Unknown'))) > 2 ? slice(resolution(quality(streams,'WEB-DL'),'720p','Unknown'), 2) : [])",
     "merge(count(cached(resolution(quality(streams,'WEBRip'),'2160p'))) > 2 ? slice(resolution(quality(streams,'WEBRip'),'2160p'), 2) : [], count(cached(resolution(quality(streams,'WEBRip'),'1440p','1080p'))) > 2 ? slice(resolution(quality(streams,'WEBRip'),'1440p','1080p'), 2) : [], count(cached(resolution(quality(streams,'WEBRip'),'720p','Unknown'))) > 2 ? slice(resolution(quality(streams,'WEBRip'),'720p','Unknown'), 2) : [], count(cached(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p'))) > 2 ? slice(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p'), 2) : [], count(cached(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown'))) > 2 ? slice(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown'), 2) : [], count(cached(resolution(quality(streams,'Unknown'),'2160p'))) > 2 ? slice(resolution(quality(streams,'Unknown'),'2160p'), 2) : [], count(cached(resolution(quality(streams,'Unknown'),'1440p','1080p'))) > 2 ? slice(resolution(quality(streams,'Unknown'),'1440p','1080p'), 2) : [], count(cached(resolution(quality(streams,'Unknown'),'720p','Unknown'))) > 2 ? slice(resolution(quality(streams,'Unknown'),'720p','Unknown'), 2) : [])"
   ],
+  "preferredStreamExpressions": [],
+  "includedStreamExpressions": [
+    "visualTag(streams, '3D', 'IMAX')"
+  ],
   "hideErrorsForResources": [],
   "showStatistics": true,
   "yearMatching": {
@@ -1015,5 +1019,9 @@
       "addonName": "Youtubio"
     }
   ],
-  "externalDownloads": false
+  "externalDownloads": false,
+  "includedRegexPatterns": [
+    "/\\b(3d|sbs|half[ .-]ou|half[ .-]sbs|BluRay3D|BD3D|3D\\.BluRay|3D\\.BLURAY|3D\\.BD|MVC|H-SBS|H-TAB|anaglyphic|stereoscopic|side\\.by\\.side|top\\.and\\.bottom|TAB|frame\\.packed|frame\\.packing|3D\\.HSBS|3D\\.HOU|3D\\.TAB|3D\\.FP)\\b/i",
+    "/\\b(IMAX|Imax|imax|IMAX\\.Enhanced|IMAX\\.ENHANCED|IMAX\\.DMR|DMR|IMAX\\.Remastered|IMAX\\.REMASTERED|Enhanced\\.for\\.IMAX|ENHANCED\\.FOR\\.IMAX)\\b/i"
+  ]
 }
