@@ -1,9 +1,8 @@
 # AIOStreams Configuration
 
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/71f73d6c-365d-4390-8149-eadfa4eaaf63" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/37a69ed0-167c-46ac-93ff-e614298a2fc4" />
 
 ## 📋 Overview
-
 
 This is a custom **[AIOStreams](https://github.com/Viren070/AIOStreams)** configuration for **[Stremio](https://www.stremio.com/)**, optimized for Portuguese and English content with a focus on high quality. The configuration uses Real-Debrid as the primary debrid service and includes a carefully selected collection of addons for maximum compatibility and quality.
 
