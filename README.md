@@ -4,7 +4,21 @@
 
 ## 📋 Overview
 
+
 This is a custom **[AIOStreams](https://github.com/Viren070/AIOStreams)** configuration for **[Stremio](https://www.stremio.com/)**, optimized for Portuguese and English content with a focus on high quality. The configuration uses Real-Debrid as the primary debrid service and includes a carefully selected collection of addons for maximum compatibility and quality.
+
+## 🆕 What's New (updated: 2025-08-30)
+
+- The main configuration file, `aiostreams-config.json`, is now highly optimized: it is as small as possible and only contains what is strictly necessary for the best experience. All localized configurations are generated from this main file, ensuring minimal and maintainable outputs.
+- The configuration generator script (`generate-config.sh`) always writes the generated file to the repository root using the pattern `aiostreams-config-<locale>.json` (for example, `aiostreams-config-french.json`).
+- You can easily generate localized configurations (for French, Brazilian Portuguese, etc.) from the main config by running the script with the desired locale. Example:
+  ```bash
+  ./generate-config/generate-config.sh french
+  # or, from the root:
+  ./generate-config.sh french
+  ```
+- In extra addons, the protocol `stremio://` is used instead of `https://` for manifest URLs, as it was found to be faster and more reliable in Stremio.
+- The configuration leverages the **Rating Poster DataBase (rpdb)** for enhanced poster and rating metadata, improving the browsing and selection experience.
 
 ### 🔗 Related Projects
 - **[AIOStreams](https://github.com/Viren070/AIOStreams)** - Advanced Stremio addon aggregator
@@ -47,7 +61,13 @@ This repository provides **four configuration versions** to suit different langu
 - **Includes**: TvVoo (France + UK), French subtitle support, and French torrent sources
 - **Best for**: French-speaking users who want both English and French content
 
+
 All versions include the same high-quality streaming addons (Torrentio, Comet, MediaFusion, etc.) and quality preferences, differing only in language-specific content sources and subtitle configurations.
+
+## ⚡ Technical Optimizations
+
+- **stremio:// protocol for addons:** All extra addon manifests use the `stremio://` protocol instead of `https://` for faster and more reliable loading in Stremio. This improves startup speed and reduces manifest fetch issues.
+- **Rating Poster DataBase (rpdb):** The configuration leverages the Rating Poster DataBase (rpdb) to provide enhanced poster images and rating metadata, improving the browsing and selection experience in Stremio.
 
 ## 🔐 Debrid Services
 
@@ -322,6 +342,126 @@ Select the appropriate configuration file based on your language preferences:
 - ⚠️ **Limited high-quality sources** - Fewer 4K/1080p options
 - ⚠️ **No instant playback** - Torrents need to buffer/download first
 - ⚠️ **ISP restrictions** - Some ISPs block P2P traffic
+
+## 🔧 Configuration Generator
+
+This repository includes a powerful **configuration generator script** that allows you to create custom localized versions by combining the base configuration with locale-specific settings.
+
+### 🚀 Quick Start
+
+Generate a French configuration (two equivalent ways):
+
+- From the repository root:
+```bash
+./generate-config/generate-config.sh french
+```
+
+- From inside the `generate-config/` directory:
+```bash
+cd generate-config && ./generate-config.sh french
+```
+
+Note: the script now always writes the generated file to the repository root as `aiostreams-config-<locale>.json` (e.g. `aiostreams-config-french.json`).
+
+### 📁 How It Works
+
+The generator combines:
+- **Base configuration**: `aiostreams-config.json` (repo root)
+- **Locale-specific settings**: `generate-config/{locale}.json` (inside `generate-config/`)
+- **Output**: `aiostreams-config-{locale}.json` (created in the repository root)
+
+### 🌍 Available Locales
+
+- **French**: `./generate-config.sh french`
+  - Includes TvVoo France addon
+  - French language priority
+  - France-specific catalogs
+
+### 🛠️ Creating New Locales
+
+1. **Create a locale file** in `generate-config/` (e.g., `spanish.json`):
+
+```json
+{
+  "languagePreferences": {
+    "languages": ["es", "en", "multi"],
+    "preferredLanguages": ["Spanish", "English", "Unknown"]
+  },
+  "additionalPresets": [
+    {
+      "type": "custom",
+      "instanceId": "es1",
+      "enabled": true,
+      "options": {
+        "name": "Spanish Addon",
+        "manifestUrl": "stremio://example.com/manifest.json",
+        "formatPassthrough": true,
+        "resultPassthrough": true
+      }
+    }
+  ],
+  "additionalCatalogs": [
+    {
+      "id": "es_catalog",
+      "name": "Spanish Catalog",
+      "type": "tv",
+      "enabled": true,
+      "shuffle": false,
+      "rpdb": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "SpanishAddon"
+    }
+  ],
+  "countrySpecific": {
+    "region": "Spain",
+    "prioritizeLocalContent": true
+  }
+}
+```
+
+2. **Run the generator**:
+```bash
+./generate-config.sh spanish
+```
+
+### 📋 Configuration Structure
+
+#### Language Preferences
+- `languages`: Language code priority (e.g., `["fr", "en", "multi"]`)
+- `preferredLanguages`: Full language names (e.g., `["French", "English"]`)
+
+#### Additional Presets
+Array of locale-specific addons/presets to add to the base configuration.
+
+#### Additional Catalogs
+Array of locale-specific catalogs to include.
+
+#### Country Specific
+Region-specific settings and preferences.
+
+### 🔧 Dependencies
+
+The script requires:
+- **`jq`** - For JSON processing
+- **`bash`** - For script execution
+
+Install jq:
+```bash
+# Ubuntu/Debian
+sudo apt-get install jq
+
+# macOS
+brew install jq
+```
+
+### ✨ Features
+
+- ✅ **JSON validation** - Ensures generated configs are valid
+- ✅ **Error handling** - Clear error messages and validation
+- ✅ **Colored output** - Easy-to-read terminal feedback
+- ✅ **Dependency checking** - Automatic verification of requirements
+- ✅ **Flexible structure** - Easy to extend for new locales
 
 ### 🔑 Complete Setup (Recommended)
 

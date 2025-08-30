@@ -1,0 +1,80 @@
+{
+  "languagePreferences": {
+    "languageReplacements": {
+      "Portuguese": "French"
+    }
+  },
+  "subtitleLanguageMapping": {
+    "SubHero": {
+      "languages": ["fr", "en"]
+    },
+    "AIOSubtitle": {
+      "languages": ["french", "english"]
+    },
+    "OpenSubtitles V3+": {
+      "language": ["fr", "en"]
+    }
+  },
+  "excludedPresets": [
+    {
+      "name": "Tugaflix"
+    },
+    {
+      "name": "TugaKids"
+    },
+    {
+      "name": "Minha TV"
+    },
+    {
+      "name": "Reflux"
+    },
+    {
+      "name": "Brazuca Torrents"
+    }
+  ],
+  "excludedCatalogs": [
+    {
+      "addonName": "TugaKids"
+    },
+    {
+      "addonName": "Minha TV"
+    },
+    {
+      "addonName": "Reflux"
+    },
+    {
+      "addonName": "Brazuca Torrents"
+    }
+  ],
+  "modifiedPresets": [
+    {
+      "name": "TvVoo",
+      "options": {
+        "manifestUrl": "stremio://tvvoo.hayd.uk/cfg-uk-fr/manifest.json"
+      }
+    },
+    {
+      "name": "SubSource",
+      "options": {
+        "language": [
+          "English",
+          "French",
+          "French (Canada)",
+          "French (France)"
+        ]
+      }
+    }
+  ],
+  "catalogReplacements": [
+    {
+      "match": {
+        "id": "7dae3b0.vavoo_tv_pt",
+        "name": "TvVoo • Portugal"
+      },
+      "replace": {
+        "id": "7dae3b0.vavoo_tv_fr",
+        "name": "Vavoo TV • France"
+      }
+    }
+  ]
+}
