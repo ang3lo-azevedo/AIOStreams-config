@@ -19,19 +19,6 @@
       }
     },
     {
-      "type": "anime-kitsu",
-      "instanceId": "275",
-      "enabled": true,
-      "options": {
-        "name": "Anime Kitsu",
-        "timeout": 15000,
-        "resources": [
-          "catalog",
-          "meta"
-        ]
-      }
-    },
-    {
       "type": "custom",
       "instanceId": "162",
       "enabled": true,
@@ -122,7 +109,7 @@
     {
       "type": "mediafusion",
       "instanceId": "904",
-      "enabled": false,
+      "enabled": true,
       "options": {
         "name": "MediaFusion",
         "timeout": 10000,
@@ -151,26 +138,12 @@
       }
     },
     {
-      "type": "webstreamr",
-      "instanceId": "8c3",
+      "type": "custom",
+      "instanceId": "4e5",
       "enabled": true,
       "options": {
-        "name": "WebStreamr",
-        "timeout": 15000,
-        "resources": [
-          "stream"
-        ],
-        "providers": [
-          "en",
-          "multi",
-          "de",
-          "es",
-          "fr",
-          "it",
-          "mx"
-        ],
-        "includeExternalUrls": true,
-        "showErrors": true
+        "name": "Reflux",
+        "manifestUrl": "stremio://rx.postclub.me/manifest.json"
       }
     },
     {
@@ -210,16 +183,43 @@
       }
     },
     {
-      "type": "aiosubtitle",
-      "instanceId": "07f",
-      "enabled": true,
+      "type": "opensubtitles",
+      "instanceId": "8c1",
+      "enabled": false,
       "options": {
-        "name": "AIOSubtitle",
+        "name": "OpenSubtitles",
+        "timeout": 15000
+      }
+    },
+    {
+      "type": "opensubtitles-v3-plus",
+      "instanceId": "08d",
+      "enabled": false,
+      "options": {
+        "name": "OpenSubtitles V3+",
         "timeout": 15000,
-        "languages": [
-          "english",
-          "portuguese"
-        ]
+        "language": [
+          "en",
+          "pm"
+        ],
+        "sources": "all",
+        "includeAiTranslated": true,
+        "movieHashPlusAutoAdjustment": true
+      }
+    },
+    {
+      "type": "subsource",
+      "instanceId": "b6c",
+      "enabled": false,
+      "options": {
+        "name": "SubSource",
+        "timeout": 15000,
+        "language": [
+          "English",
+          "Portuguese",
+          "Brazillian Portuguese"
+        ],
+        "hearingImpairment": "hiInclude"
       }
     },
     {
@@ -237,65 +237,24 @@
       }
     },
     {
-      "type": "subsource",
-      "instanceId": "b6c",
-      "enabled": true,
+      "type": "aiosubtitle",
+      "instanceId": "07f",
+      "enabled": false,
       "options": {
-        "name": "SubSource",
+        "name": "AIOSubtitle",
         "timeout": 15000,
-        "language": [
-          "English",
-          "Portuguese",
-          "Brazillian Portuguese"
-        ],
-        "hearingImpairment": "hiInclude"
-      }
-    },
-    {
-      "type": "custom",
-      "instanceId": "508",
-      "enabled": true,
-      "options": {
-        "name": "opensubtitles PRO",
-        "manifestUrl": "stremio://opensubtitlesv3-pro.dexter21767.com/eyJsYW5ncyI6WyJwb3J0dWd1ZXNlIiwicG9ydHVndWVzZS1iciIsInBvcnR1Z3Vlc2UtbXoiLCJlbmdsaXNoIl0sInNvdXJjZSI6ImFsbCIsImFpVHJhbnNsYXRlZCI6dHJ1ZSwiYXV0b0FkanVzdG1lbnQiOnRydWV9/manifest.json",
-        "libraryAddon": false,
-        "resultPassthrough": false,
-        "forceToTop": false,
-        "timeout": 15000,
-        "resources": []
-      }
-    },
-    {
-      "type": "opensubtitles-v3-plus",
-      "instanceId": "08d",
-      "enabled": true,
-      "options": {
-        "name": "OpenSubtitles V3+",
-        "timeout": 15000,
-        "language": [
-          "en",
-          "pm"
-        ],
-        "sources": "all",
-        "includeAiTranslated": true,
-        "movieHashPlusAutoAdjustment": true
-      }
-    },
-    {
-      "type": "opensubtitles",
-      "instanceId": "8c1",
-      "enabled": true,
-      "options": {
-        "name": "OpenSubtitles",
-        "timeout": 15000
+        "languages": [
+          "english",
+          "portuguese"
+        ]
       }
     }
   ],
   "formatter": {
     "id": "custom",
     "definition": {
-      "name": "{stream.proxied::istrue[\"🛡️               \"||\"\"]}\n{stream.regexMatched::=3D[\"{stream.regexMatched}               \"||\"\"]}{stream.regexMatched::=IMAX[\"{stream.regexMatched}               \"||\"\"]}\n{stream.resolution::=2160p[\"4K\"||\"\"]}{stream.resolution::=1440p[\"2K\"||\"\"]}{stream.resolution::=1080p[\"1080p\"||\"\"]}{stream.resolution::=720p[\"720p\"||\"\"]}{stream.resolution::=576p[\"576p\"||\"\"]}{stream.resolution::=540p[\"540p\"||\"\"]}{stream.resolution::=480p[\"480p\"||\"\"]}{stream.resolution::=360p[\"360p\"||\"\"]}{stream.resolution::=240p[\"240p\"||\"\"]}{stream.resolution::=144p[\"144p\"||\"\"]}\n{stream.type::=p2p[\" 🔗     \"||\"\"]}{service.cached::istrue[\" ⚡     \"||\"\"]}{service.cached::isfalse[\" ⏳     \"||\"\"]}\n{stream.quality::exists[\"{stream.quality::title}\"||\" \"]}\n{stream.regexMatched::exists[\"{stream.regexMatched}\"||\"\"]}\n{stream.type::=live[\"🔴 LIVE\"||\"\"]}{stream.type::=usenet[\"[usenet]\"||\"\"]}{stream.type::=Http[\"🌐 {addon.name}\"||\"\"]}{stream.type::=External[\"🌐 {addon.name}\"||\"\"]}",
-      "description": "{stream.library::istrue[\"☁️\"||\"\"]} {stream.filename::~Extended[\"[Extended Cut] \"||\"\"]}{stream.filename::~Theatrical[\"[Theatrical Cut] \"||\"\"]}{stream.filename::~Director[\"[Director's Cut] \"||\"\"]}{stream.filename::~DC[\"[Director's Cut] \"||\"\"]}{stream.filename::~Ultimate[\"[Ultimate Edition] \"||\"\"]}{stream.filename::~Special[\"[Special Edition] \"||\"\"]}{stream.filename::~Alternate[\"[Alternate Edition] \"||\"\"]}{stream.filename::~Redux[\"[Redux] \"||\"\"]}\n{stream.message::exists[\"ℹ️  {stream.message}\"||\"\"]}\n{stream.encode::exists[\"🧪  {stream.encode} \"||\"\"]}{stream.visualTags::exists[\"🎨  {stream.visualTags::join(' · ')} \"||\"\"]}\n{stream.audioTags::exists[\"🎵  {stream.audioTags::join(' · ')} \"||\"\"]}{stream.audioChannels::exists[\"🎧  {stream.audioChannels::join(' · ')}\"||\"\"]}\n{stream.size::>0[\"🗄️  {stream.size::bytes} \"||\"\"]}{stream.folderSize::>0[\"/ {stream.folderSize::bytes}\"||\"\"]}{stream.seeders::>0[\" ⇋ {stream.seeders} 🌱 \"||\"\"]}{stream.duration::>0[\"· {stream.duration::time} \"||\"\"]}{stream.age::exists[\"· {stream.age} \"||\"\"]}{stream.languageEmojis::exists[\"· {stream.languageEmojis::join(' · ')}\"||\"\"]}\n{stream.type::=External[\"\"||\"📁 {addon.name}\"]}{stream.releaseGroup::exists[\" · {stream.releaseGroup}\"||\"\"]}{stream.indexer::exists[\" · {stream.indexer}\"||\"\"]}\n{stream.filename::exists[\"📄 {stream.filename}\"||\"\"]}"
+      "name": "{stream.proxied::istrue[\"🛡️               \"||\"\"]}\n{stream.regexMatched::=3D[\"{stream.regexMatched}               \"||\"\"]}{stream.regexMatched::=IMAX[\"{stream.regexMatched}               \"||\"\"]}\n{stream.resolution::=2160p[\"𝟜𝙺\"||\"\"]}{stream.resolution::=1440p[\"𝟚𝙺\"||\"\"]}{stream.resolution::=1080p[\"1080𝕡\"||\"\"]}{stream.resolution::=720p[\"720𝕡\"||\"\"]}{stream.resolution::=576p[\"576𝕡\"||\"\"]}{stream.resolution::=540p[\"540𝕡\"||\"\"]}{stream.resolution::=480p[\"480𝕡\"||\"\"]}{stream.resolution::=360p[\"360𝕡\"||\"\"]}{stream.resolution::=240p[\"240𝕡\"||\"\"]}{stream.resolution::=144p[\"144𝕡\"||\"\"]}\n{stream.type::=p2p[\" 🔗     \"||\"\"]}{service.cached::istrue[\" ⚡     \"||\"\"]}{service.cached::isfalse[\" ⏳     \"||\"\"]}\n{stream.quality::exists[\"{stream.quality::title}\"||\" \"]}\n{stream.regexMatched::exists[\"{stream.regexMatched}\"||\"\"]}\n{stream.type::=live[\"🔴\"||\"\"]}{stream.type::=usenet[\"[usenet]\"||\"\"]}{stream.type::=Http[\"[http]\"||\"\"]}{stream.type::=External[\"🌐 {addon.name}\"||\"\"]}",
+      "description": "{stream.library::istrue[\"☁️\"||\"\"]} {stream.filename::~Extended[\"[Extended Cut] \"||\"\"]}{stream.filename::~Theatrical[\"[Theatrical Cut] \"||\"\"]}{stream.filename::~Director[\"[Director's Cut] \"||\"\"]}{stream.filename::~DC[\"[Director's Cut] \"||\"\"]}{stream.filename::~Ultimate[\"[Ultimate Edition] \"||\"\"]}{stream.filename::~Special[\"[Special Edition] \"||\"\"]}{stream.filename::~Alternate[\"[Alternate Edition] \"||\"\"]}{stream.filename::~Redux[\"[Redux] \"||\"\"]}\n{stream.message::exists[\"ℹ️  {stream.message}\"||\"\"]}\n{stream.encode::exists[\"🧪  {stream.encode} \"||\"\"]}{stream.visualTags::exists[\"🎨  {stream.visualTags::join(' · ')} \"||\"\"]}\n{stream.audioTags::exists[\"🎵  {stream.audioTags::join(' · ')} \"||\"\"]}{stream.audioChannels::exists[\"🎧  {stream.audioChannels::join(' · ')}\"||\"\"]}\n{stream.size::>0[\"🗄️  {stream.size::bytes} \"||\"\"]}{stream.folderSize::>0[\"/ {stream.folderSize::bytes}\"||\"\"]}{stream.seeders::>0[\" ⇋ {stream.seeders} 🌱 \"||\"\"]}{stream.duration::>0[\"· {stream.duration::time} \"||\"\"]}{stream.age::exists[\"· {stream.age} \"||\"\"]}{stream.languageEmojis::exists[\"· {stream.smallLanguageCodes::join(' · ')}\"||\"\"]}\n{stream.type::=External[\"\"||\"📁 {addon.name}\"]}{stream.releaseGroup::exists[\" · {stream.releaseGroup}\"||\"\"]}{stream.indexer::exists[\" · {stream.indexer}\"||\"\"]}\n{stream.filename::exists[\"📄 {stream.filename}\"||\"\"]}"
     }
   },
   "preferredQualities": [
@@ -509,7 +468,7 @@
     },
     {
       "name": "Anime BD T3",
-      "pattern": "/(\\[(Ayashii|Dekinai|EXP|Headpatter|Kaizoku|Mysteria|Senjou|YURI)\\]|-(Ayashii|Dekinai|EXP|Headpatter|Kaizoku|Mysteria|Senjou|YURI)\\b|\\b(ASC|AssMix|B00BA|CBT|CTR|CyC|Flugel|Galator|GSK[._-]kun|Holomux|IK|AnimeKaizoku|Kametsu|KH|kuchikirukia|LazyRemux|MK|Netaro|Pn8|Pookie|Quetzal|Rasetsu|ShowY|WBDP|WSE|Yoghurt|ZOIO|ZR)\\b|-ZR-)|(?<=remux).*\\b(NAN0)\\b/i"
+      "pattern": "/(\\[(Ayashii|CRUCiBLE|Dekinai|EXP|Kaizoku|Mysteria|Senjou|YURI)\\]|-(Ayashii|CRUCiBLE|Dekinai|EXP|Kaizoku|Mysteria|Senjou|YURI)\\b|\\b(ASC|AssMix|B00BA|CBT|CTR|CyC|Flugel|Galator|GSK[._-]kun|Holomux|IK|AnimeKaizoku|Kametsu|KH|kuchikirukia|LazyRemux|MK|Netaro|Pn8|Pookie|Quetzal|Rasetsu|ShowY|WBDP|WSE|Yoghurt|ZOIO|ZR)\\b|-ZR-)|(?<=remux).*\\b(NAN0)\\b/i"
     },
     {
       "name": "Anime BD T4",
@@ -532,23 +491,23 @@
       "pattern": "/\\bRemux\\b.*\\b(ATELiER|iFT|NTb|PTP|SumVision|TOA)\\b/i"
     },
     {
-      "name": "Bluray T1",
+      "name": "T1",
       "pattern": "/^(?=.*\\bBlu[-_]?Ray\\b)(?!.*\\bRemux\\b)(?!.*\\bWEB[-_.]?(?:DL|Rip)\\b)(?=.*(?:\\b(?:BBQ|c0kE|CRiSC|CtrlHD|Dariush|decibeL|D-Z0N3|EbP|EDPH|LolHD|MainFrame|NCmt|NTb|PTer|TayTO|TDD|TnP|VietHD|ZoroSenpai|W4NK3R|ZQ)\\b|-BMF)).*/i"
     },
     {
-      "name": "Bluray T1",
+      "name": "T1",
       "pattern": "/^(?=.*\\bBlu[-_]?Ray\\b)(?!.*\\bRemux\\b)(?!.*\\bWEB[-_.]?(?:DL|Rip)\\b)(?=.*(?:\\b(?:DON|Geek)\\b)).*/"
     },
     {
-      "name": "Bluray T2",
+      "name": "T2",
       "pattern": "/^(?=.*\\bBlu[-_]?Ray\\b)(?!.*\\bRemux\\b)(?!.*\\bWEB[-_.]?(?:DL|Rip)\\b)(?=.*\\b(?:EA|HiDt|HiSD|HQMUX|iFT|QOQ|SA89|sbR)\\b).*/i"
     },
     {
-      "name": "Bluray T3",
+      "name": "T3",
       "pattern": "/^(?=.*\\bBlu[-_]?Ray\\b)(?!.*\\bRemux\\b)(?!.*\\bWEB[-_.]?(?:DL|Rip)\\b)(?=.*\\b(?:ATELiER|BHDStudio|hallowed|HiFi|HONE|SPHD|WEBDV|playHD)\\b).*/i"
     },
     {
-      "name": "Bluray T3",
+      "name": "T3",
       "pattern": "/^(?=.*\\bBlu[-_]?Ray\\b)(?!.*\\bRemux\\b)(?!.*\\bWEB[-_.]?(?:DL|Rip)\\b)(?=.*\\b(?:LoRD)\\b).*/"
     },
     {
@@ -577,7 +536,7 @@
     },
     {
       "name": "Web T1",
-      "pattern": "/^(?=.*\\bWEB[-_.]?(?:DL|RIP)\\b)(?=.*\\b(?:ABBIE|AJP69|PAXA|PEXA|XEPA|BLUTONiUM|CasStudio|CMRG|CRFW|CRUD|CtrlHD|GNOME|HONE|Kitsune|monkee|NOSiViD|NTb|NTG|QOQ|RTN|SiC|TEPES|TheFarm|T6D|ViSUM)\\b).*/i"
+      "pattern": "/^(?=.*\\bWEB[-_.]?(?:DL|RIP)\\b)(?=.*\\b(?:ABBIE|AJP69|PAXA|PEXA|XEPA|BLUTONiUM|CasStudio|CMRG|CRFW|CRUD|CtrlHD|GNOME|HONE|Kitsune|monkee|NOSiViD|NTb|NTG|QOQ|RTN|SiC|TEPES|T6D|ViSUM)\\b).*/i"
     },
     {
       "name": "Web T1",
@@ -628,20 +587,18 @@
   "showStatistics": true,
   "titleMatching": {
     "mode": "contains",
-    "enabled": false,
+    "enabled": true,
     "requestTypes": [
       "movie",
       "series"
-    ],
-    "addons": []
+    ]
   },
   "seasonEpisodeMatching": {
     "enabled": true,
     "requestTypes": [
       "movie",
       "series"
-    ],
-    "addons": []
+    ]
   },
   "autoPlay": {
     "attributes": [
@@ -660,21 +617,10 @@
   "alwaysPrecache": true,
   "catalogModifications": [
     {
-      "id": "275e3b0.kitsu-anime-list",
-      "type": "anime",
-      "name": "Kitsu",
-      "rpdb": true,
-      "hideable": false,
-      "searchable": false,
-      "addonName": "Anime Kitsu"
-    },
-    {
       "id": "f19e3b0.sagas",
       "type": "movie",
       "name": "Marathons & Sagas",
       "rpdb": true,
-      "hideable": false,
-      "searchable": false,
       "addonName": "Sagas and Marathons"
     },
     {
@@ -687,72 +633,11 @@
       "addonName": "TugaKids"
     },
     {
-      "id": "3d14414.torrentio-realdebrid",
-      "type": "other",
-      "name": "RealDebrid",
-      "onlyOnDiscover": true,
-      "rpdb": true,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "Torrentio"
-    },
-    {
-      "id": "275e3b0.kitsu-anime-trending",
-      "type": "anime",
-      "name": "Kitsu Trending",
-      "onlyOnDiscover": true,
-      "rpdb": true,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "Anime Kitsu"
-    },
-    {
-      "id": "275e3b0.kitsu-anime-airing",
-      "type": "anime",
-      "name": "Kitsu Top Airing",
-      "onlyOnDiscover": true,
-      "rpdb": true,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "Anime Kitsu"
-    },
-    {
-      "id": "275e3b0.kitsu-anime-popular",
-      "type": "anime",
-      "name": "Kitsu Most Popular",
-      "onlyOnDiscover": true,
-      "rpdb": true,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "Anime Kitsu"
-    },
-    {
-      "id": "275e3b0.kitsu-anime-rating",
-      "type": "anime",
-      "name": "Kitsu Highest Rated",
-      "onlyOnDiscover": true,
-      "rpdb": true,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "Anime Kitsu"
-    },
-    {
       "id": "7dae3b0.vavoo_tv_pt",
       "type": "tv",
       "name": "TvVoo • Portugal",
       "rpdb": true,
       "hideable": true,
-      "searchable": true,
-      "addonName": "TvVoo"
-    },
-    {
-      "id": "7dae3b0.vavoo_tv_uk",
-      "type": "tv",
-      "name": "TvVoo • United Kingdom",
-      "onlyOnDiscover": true,
-      "rpdb": true,
-      "hideable": true,
-      "searchable": true,
       "addonName": "TvVoo"
     },
     {
@@ -762,7 +647,6 @@
       "onlyOnDiscover": true,
       "rpdb": true,
       "hideable": true,
-      "searchable": false,
       "addonName": "Minha TV"
     },
     {
@@ -772,16 +656,29 @@
       "onlyOnDiscover": true,
       "rpdb": true,
       "hideable": true,
-      "searchable": false,
       "addonName": "USA TV"
+    },
+    {
+      "id": "7dae3b0.vavoo_tv_uk",
+      "type": "tv",
+      "name": "TvVoo • United Kingdom",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "TvVoo"
+    },
+    {
+      "id": "acce3b0.yt_id::ytsearch100",
+      "type": "YouTube",
+      "name": "Mixed",
+      "rpdb": true,
+      "addonName": "Youtubio"
     },
     {
       "id": "acce3b0.yt_id::ytsearch100:video",
       "type": "YouTube",
       "name": "Video",
       "rpdb": true,
-      "hideable": false,
-      "searchable": false,
       "addonName": "Youtubio"
     },
     {
@@ -789,9 +686,108 @@
       "type": "YouTube",
       "name": "Channel",
       "rpdb": true,
-      "hideable": false,
-      "searchable": false,
       "addonName": "Youtubio"
+    },
+    {
+      "id": "3d14414.torrentio-realdebrid",
+      "type": "other",
+      "name": "RealDebrid",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "Torrentio"
+    },
+    {
+      "id": "9044414.realdebrid_watchlist_movies",
+      "name": "RD Watchlist",
+      "type": "movie",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "MediaFusion"
+    },
+    {
+      "id": "9044414.realdebrid_watchlist_series",
+      "name": "RD Watchlist",
+      "type": "series",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "MediaFusion"
+    },
+    {
+      "id": "4e5e3b0.reflux.ALL",
+      "type": "movie",
+      "name": "Reflux - Todos",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.ALL",
+      "type": "series",
+      "name": "Reflux - Todos",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.POPULAR",
+      "type": "movie",
+      "name": "Reflux - Em alta",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.POPULAR",
+      "type": "series",
+      "name": "Reflux - Em alta",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.TOP_RATED",
+      "type": "movie",
+      "name": "Reflux - Mais avaliados",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.TOP_RATED",
+      "type": "series",
+      "name": "Reflux - Mais avaliados",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.THEATHER",
+      "type": "movie",
+      "name": "Reflux - Lançamentos",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "Reflux"
+    },
+    {
+      "id": "4e5e3b0.reflux.THEATHER",
+      "type": "series",
+      "name": "Reflux - Lançamentos",
+      "onlyOnDiscover": true,
+      "rpdb": true,
+      "hideable": true,
+      "addonName": "Reflux"
     }
   ]
 }
