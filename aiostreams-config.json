@@ -60,8 +60,38 @@
       "enabled": true,
       "options": {
         "name": "TugaKids",
-        "manifestUrl": "stremio://e1d6cc1ff4a7-tugakids-stremio.baby-beamup.club/%7B%22tk%22:%226c6b4ccf00da7461963cd3d01997c2bf47b14430402073f4f1%22%7D/manifest.json",
-        "resultPassthrough": true
+        "manifestUrl": "stremio://e1d6cc1ff4a7-tugakids-stremio.baby-beamup.club/%7B%22tk%22:%22e06526af9202aa5e12448414ebc1a8d6fcccffa9b24efff6bc%22%7D/manifest.json",
+        "resultPassthrough": true,
+        "resources": []
+      }
+    },
+    {
+      "type": "torbox-search",
+      "instanceId": "665",
+      "enabled": true,
+      "options": {
+        "name": "TorBox Search",
+        "timeout": 15000,
+        "sources": [
+          "torrent"
+        ],
+        "userSearchEngines": true,
+        "onlyShowUserSearchResults": false,
+        "useMultipleInstances": false
+      }
+    },
+    {
+      "type": "torbox",
+      "instanceId": "d57",
+      "enabled": true,
+      "options": {
+        "name": "TorBox",
+        "timeout": 15000,
+        "resources": [
+          "stream",
+          "meta",
+          "catalog"
+        ]
       }
     },
     {
@@ -122,7 +152,7 @@
     {
       "type": "mediafusion",
       "instanceId": "904",
-      "enabled": false,
+      "enabled": true,
       "options": {
         "name": "MediaFusion",
         "timeout": 10000,
@@ -148,6 +178,33 @@
       "options": {
         "name": "Brazuca Torrents",
         "manifestUrl": "stremio://94c8cb9f702d-brazuca-torrents.baby-beamup.club/manifest.json"
+      }
+    },
+    {
+      "type": "jackettio",
+      "instanceId": "d92",
+      "enabled": true,
+      "options": {
+        "name": "Jackettio",
+        "timeout": 15000,
+        "resources": [
+          "stream"
+        ]
+      }
+    },
+    {
+      "type": "custom",
+      "instanceId": "b31",
+      "enabled": true,
+      "options": {
+        "name": "HiAnime",
+        "manifestUrl": "stremio://86f0740f37f6-hanime-stremio.baby-beamup.club/manifest.json",
+        "libraryAddon": false,
+        "formatPassthrough": true,
+        "resultPassthrough": true,
+        "forceToTop": true,
+        "timeout": 15000,
+        "resources": []
       }
     },
     {
@@ -453,7 +510,9 @@
     "HDR Only",
     "AI",
     "SDR",
-    "Unknown"
+    "Unknown",
+    "H-SBS",
+    "H-OU"
   ],
   "preferredAudioTags": [
     "Atmos",
@@ -478,12 +537,10 @@
     "AV1",
     "HEVC",
     "AVC",
-    "H-SBS",
-    "H-OU",
     "Unknown"
   ],
   "preferredRegexPatterns": [
-    {
+       {
       "name": "3D",
       "pattern": "/\\b(3d|sbs|half[ .-]ou|half[ .-]sbs|BluRay3D|BD3D|3D\\.BluRay|3D\\.BLURAY|3D\\.BD|MVC|H-SBS|H-TAB|anaglyphic|stereoscopic|side\\.by\\.side|top\\.and\\.bottom|TAB|frame\\.packed|frame\\.packing|3D\\.HSBS|3D\\.HOU|3D\\.TAB|3D\\.FP)\\b/i"
     },
@@ -509,7 +566,7 @@
     },
     {
       "name": "Anime BD T3",
-      "pattern": "/(\\[(Ayashii|Dekinai|EXP|Headpatter|Kaizoku|Mysteria|Senjou|YURI)\\]|-(Ayashii|Dekinai|EXP|Headpatter|Kaizoku|Mysteria|Senjou|YURI)\\b|\\b(ASC|AssMix|B00BA|CBT|CTR|CyC|Flugel|Galator|GSK[._-]kun|Holomux|IK|AnimeKaizoku|Kametsu|KH|kuchikirukia|LazyRemux|MK|Netaro|Pn8|Pookie|Quetzal|Rasetsu|ShowY|WBDP|WSE|Yoghurt|ZOIO|ZR)\\b|-ZR-)|(?<=remux).*\\b(NAN0)\\b/i"
+      "pattern": "/(\\[(Ayashii|CRUCiBLE|Dekinai|EXP|Headpatter|Kaizoku|Mysteria|Senjou|YURI)\\]|-(Ayashii|CRUCiBLE|Dekinai|EXP|Headpatter|Kaizoku|Mysteria|Senjou|YURI)\\b|\\b(ASC|AssMix|B00BA|CBT|CTR|CyC|Flugel|Galator|GSK[._-]kun|Holomux|IK|AnimeKaizoku|Kametsu|KH|kuchikirukia|LazyRemux|MK|Netaro|Pn8|Pookie|Quetzal|Rasetsu|ShowY|WBDP|WSE|Yoghurt|ZOIO|ZR)\\b|-ZR-)|(?<=remux).*\\b(NAN0)\\b/i"
     },
     {
       "name": "Anime BD T4",
@@ -517,7 +574,7 @@
     },
     {
       "name": "Remux T1",
-      "pattern": "/\\bRemux\\b.*\\b(3L|BiZKiT|BLURANiUM|CiNEPHiLES|FraMeSToR|PmP|ZQ)\\b|-BMF|-WiLDCAT/i"
+      "pattern": "/\\bRemux\\b.*\\b(3L|BiZKiT|BLURANiUM|CiNEPHiLES|FraMeSToR|PmP|PiRAMiDHEAD|ZQ)\\b|-BMF|-WiLDCAT/i"
     },
     {
       "name": "Anime BD T5",
@@ -617,15 +674,15 @@
     },
     {
       "name": "",
-      "pattern": "/\\b(?<=\\b[12]\\d{3}\\b).*\\b(Extras|Bonus|Extended[ ._-]Clip|Sing[-_. ]Along)\\b|\\bAV1\\b|\\b(\\$tore-Chill|0neshot|A-Destiny|AceAres|AhmadDev|AnimeDynastyEN|AnimeKuro|AnimeRG|Animesubs|AnimeTR|Anitsu|AniVoid|ArataEnc|AREY|ASW|BJX|BlackLuster|bonkai77|CameEsp|Cat66|CBBCerberus|CuaP|DARKFLiX|DBArabic|Deadmau[ .-]?[ .-]?RAWS|DKB|DP|DsunS|ExREN|(Baked|Dead|Space)Fish|FunArts|GERMini|Hakata[ .-]?Ramen|Hall_of_C|HAV1T|HENiL|HollowRoxas|ICEBLUE|iPUNISHER|JacobSwaggedUp|Johnny-englishsubs|Kanjouteki|KEKMASTERS|Kirion|KQRM|KRP|LoliHouse|M@nI|mal[ .-]lu[ .-]zen|Man\\.KMaximus|mdcx|Metaljerk|MGD|Mites|Modders[ .-]?Bay|Mr\\.Deadpool|NemDiggers|neoHEVC|Nokou|N[eo][wo]b[ ._-]?Subs|NS|Nyanpasu|OldCastle|phazer11|Plex[ .-]?Friendly|PnPSubs|Polarwindz|Project-gxs|PuyaSubs|QAS|QCE|Rando235Ranger|M2TS|BDMV|BDVD|Reaktor|RightShiftBy2|Rip[ .-]?Time|Salieri|Samir755|SanKyuu|sekkusu&ok|SHFS|shincaps|SLAX|SRW|SSA|StrayGods|TeamTurquoize|Tenrai[ .-]?Sensei|TnF|TOPKEK|U3-Web|Valenciano|VipapkStudios|WtF[ ._-]?Anime|xiao-av1|Yabai_Desu_NeRandomRemux|YakuboEncodes|youshikibi|YuiSubs|Anime[ .-]?(Chap|Land|Time)|Mini(Freeza|MTBB|sCuba|Theatre)|-(224|Ari|Cerberus|Cleo|Daddy(Subs)?|Emmid|FAV|Hatsuyuki|Hitoki|HR|Kallango|Maximus|MD|Pantsu|Pao|Pixel|Ranger|Rapta|Raze|SAD|SEiN|Sokudo|Suki[ .-]?Desu|Trix|UNBIASED|USD|Wardevil|Yun|zza))\\b|\\[(224|Ari|Cerberus|Cleo|Daddy(Subs)?|DB|Emmid|FAV|Hatsuyuki|Hitoku|HR|Kallango|Maximus|MD|Pantsu|Pao|Pixel|Ranger|Rapta|Raze|SAD|SEiN|Sokudo|Suki[ .-]?Desu|Trix|UNBIASED|uP|USD|Wardevil|Yun|zza)\\]|\\b(Asuka|Beatrice|Daddy|Fumi|Iriza|Kawaiika|Koi|Lilith|LowPower|Nanako|NC|neko|New|Ohys|Pandoratv|Scryous|Seicher|Shiniori)[ ._-]?(Raws)\\b|\\b(Moozzi2|Raws-Maji|ReinForce)\\b|\\[km\\]|-km\\b|\\b(alfaHD.*|BAT|BlackBit|BNd|C\\.A\\.A|Cory|EXTREME|FF|FOXX|G4RiS|GUEIRA|LCD|N3G4N|ONLYMOViE|PD|PTHome|RiPER|RK|SiGLA|Tars|tokar86a|TvR|vnlls|WTV|Yatogam1|YusukeFLA|ZigZag|ZNM)\\b|\\b(Golumpa|KamiFS|torenter69)\\b|\\[Yameii\\]|-Yameii\\b|^(?!.*(Dual|Multi)[-_. ]?Audio).*((?<!multi-)\\b(dub(bed)?)\\b|(funi|eng(lish)?)_?dub)|^(?!.*(dual[ ._-]?audio|(JA|ZH|KO)\\\\+EN|EN\\+(JA|ZH|KO))).*\\b(KaiDubs|KS)\\b|\\b(BiOMA|BiTOR|DepraveD|SasukeducK|tarunk9c|VD0N|VECTOR)\\b|\\b(BRiNK|BTM|CHX|CTFOH|d3g|DepraveD|EVO|Feranki1980|FGT|FMD|GHOSTS|HiQVE|iNTENSO|iVy|JFF|KC|MeGusta|nhanc3|OFT|Pahe(\\.(ph|in))?|PSA|SasukeducK|SHD|ShieldBearer|TBS|TG|VIDEOHOLE|worldmkv|XLF|Zero00)\\b|\\b(1XBET|2160p.*BiTOR|BEN[ ._-]THE[ ._-]MEN|CREATiVE24|Feranki1980|GalaxyRG|(?<!-)\\bjennaortega(UHD)?|READ(\\s|\\.)+NOTE|SWTYBLZ|TeeWee|TEKNO3D|Will1869)\\b|\\b(24xHD|41RGB|4K4U|AOC|AROMA|aXXo|AZAZE|BARC0DE|BAUCKLEY|BdC|beAst|BTM|C1NEM4|C4K|CDDHD|CHAOS|CHD|CiNE|COLLECTiVE|CREATiVE24|CrEwSaDe|CTFOH|d3g|DDR|DNL|EPiC|EuReKA|FaNGDiNG0|Feranki1980|FGT|FMD|FRDS|FZHD|GalaxyRG|GHD|GPTHD|HDHUB4U|HDS|HDT|HDTime|HDWinG|iNTENSO|iPlanet|iVy|jennaortega(UHD)?|JFF|KC|KiNGDOM|KIRA|L0SERNIGHT|LAMA|Leffe|Liber8|LiGaS|LUCY|MarkII|mHD|mSD|MTeam|MT|MySiLU|NhaNc3|nHD|nikt0|NoGr(ou)?p|nSD|OFT|Pahe(\\.(ph|in))?|PATOMiEL|PRODJi|PSA|PTNK|RARBG|RDN|Rifftrax|RU4HD|SANTi|Scene|SHD|ShieldBearer|STUTTERSHIT|SUNSCREEN|TBS|TEKNO3D|Tigole|TIKO|VISIONPLUSHDR(-X|1000)?|WAF|WiKi|x0r|YIFY|YTS(.(MX|LT|AG))?|Zeus)\\b|\\b(VOST.*?FR(E|A)?|SUBFR(A|ENCH)?)\\b|\\b(-D3US|D3US-|DRX|E|Flights)\\b/in"
+      "pattern": "/\\b(?<=\\b[12]\\d{3}\\b).*\\b(|Extras|Bonus|Extended[ ._-]Clip|Sing[-_. ]Along)\\b|\\bAV1\\b|\\b(\\$tore-Chill|0neshot|A-Destiny|AceAres|AhmadDev|AnimeDynastyEN|AnimeKuro|AnimeRG|Animesubs|AnimeTR|Anitsu|AniVoid|ArataEnc|AREY|ASW|BJX|BlackLuster|bonkai77|CameEsp|Cat66|CBBCerberus|CuaP|DARKFLiX|DBArabic|Deadmau[ .-]?[ .-]?RAWS|DKB|DP|DsunS|ExREN|(Baked|Dead|Space)Fish|FunArts|GERMini|Hakata[ .-]?Ramen|Hall_of_C|HAV1T|HENiL|HollowRoxas|ICEBLUE|iPUNISHER|JacobSwaggedUp|Johnny-englishsubs|Kanjouteki|KEKMASTERS|Kirion|KQRM|KRP|LoliHouse|M@nI|mal[ .-]lu[ .-]zen|Man\\.KMaximus|mdcx|Metaljerk|MGD|Mites|Modders[ .-]?Bay|Mr\\.Deadpool|NemDiggers|neoHEVC|Nokou|N[eo][wo]b[ ._-]?Subs|NS|Nyanpasu|OldCastle|phazer11|Plex[ .-]?Friendly|PnPSubs|Polarwindz|Project-gxs|PuyaSubs|QAS|QCE|Rando235Ranger|M2TS|BDMV|BDVD|Reaktor|RightShiftBy2|Rip[ .-]?Time|Salieri|Samir755|SanKyuu|sekkusu&ok|SHFS|shincaps|SLAX|SRW|SSA|StrayGods|TeamTurquoize|Tenrai[ .-]?Sensei|TnF|TOPKEK|U3-Web|Valenciano|VipapkStudios|WtF[ ._-]?Anime|xiao-av1|Yabai_Desu_NeRandomRemux|YakuboEncodes|youshikibi|YuiSubs|Anime[ .-]?(Chap|Land|Time)|Mini(Freeza|MTBB|sCuba|Theatre)|-(224|Ari|Cerberus|Cleo|Daddy(Subs)?|Emmid|FAV|Hatsuyuki|Hitoki|HR|Kallango|Maximus|MD|Pantsu|Pao|Pixel|Ranger|Rapta|Raze|SAD|SEiN|Sokudo|Suki[ .-]?Desu|Trix|UNBIASED|USD|Wardevil|Yun|zza))\\b|\\[(224|Ari|Cerberus|Cleo|Daddy(Subs)?|DB|Emmid|FAV|Hatsuyuki|Hitoku|HR|Kallango|Maximus|MD|Pantsu|Pao|Pixel|Ranger|Rapta|Raze|SAD|SEiN|Sokudo|Suki[ .-]?Desu|Trix|UNBIASED|uP|USD|Wardevil|Yun|zza)\\]|\\b(Asuka|Beatrice|Daddy|Fumi|Iriza|Kawaiika|Koi|Lilith|LowPower|Nanako|NC|neko|New|Ohys|Pandoratv|Scryous|Seicher|Shiniori)[ ._-]?(Raws)\\b|\\b(Moozzi2|Raws-Maji|ReinForce)\\b|\\[km\\]|-km\\b|\\b(alfaHD.*|BAT|BlackBit|BNd|C\\.A\\.A|Cory|EXTREME|FF|FOXX|G4RiS|GUEIRA|LCD|N3G4N|ONLYMOViE|PD|PTHome|RiPER|RK|SiGLA|Tars|tokar86a|TvR|vnlls|WTV|Yatogam1|YusukeFLA|ZigZag|ZNM)\\b|\\b(Golumpa|KamiFS|torenter69)\\b|\\[Yameii\\]|-Yameii\\b|^(?!.*(Dual|Multi)[-_. ]?Audio).*((?<!multi-)\\b(dub(bed)?)\\b|(funi|eng(lish)?)_?dub)|^(?!.*(dual[ ._-]?audio|(JA|ZH|KO)\\\\+EN|EN\\+(JA|ZH|KO))).*\\b(KaiDubs|KS)\\b|\\b(BiOMA|BiTOR|DepraveD|SasukeducK|tarunk9c|VD0N|VECTOR)\\b|\\b(BRiNK|BTM|CHX|CTFOH|d3g|DepraveD|EVO|Feranki1980|FGT|FMD|GHOSTS|HiQVE|iNTENSO|iVy|JFF|KC|MeGusta|nhanc3|OFT|Pahe(\\.(ph|in))?|PSA|SasukeducK|SHD|ShieldBearer|TBS|TG|VIDEOHOLE|worldmkv|XLF|Zero00)\\b|\\b(1XBET|2160p.*BiTOR|BEN[ ._-]THE[ ._-]MEN|CREATiVE24|Feranki1980|GalaxyRG|(?<!-)\\bjennaortega(UHD)?|READ(\\s|\\.)+NOTE|SWTYBLZ|TeeWee|TEKNO3D|Will1869)\\b|\\b(24xHD|41RGB|4K4U|AOC|AROMA|aXXo|AZAZE|BARC0DE|BAUCKLEY|BdC|beAst|BTM|C1NEM4|C4K|CDDHD|CHAOS|CHD|CiNE|COLLECTiVE|CREATiVE24|CrEwSaDe|CTFOH|d3g|DDR|DNL|EPiC|EuReKA|FaNGDiNG0|Feranki1980|FGT|FMD|FRDS|FZHD|GalaxyRG|GHD|GPTHD|HDHUB4U|HDS|HDT|HDTime|HDWinG|iNTENSO|iPlanet|iVy|jennaortega(UHD)?|JFF|KC|KiNGDOM|KIRA|L0SERNIGHT|LAMA|Leffe|Liber8|LiGaS|LUCY|MarkII|mHD|mSD|MTeam|MT|MySiLU|NhaNc3|nHD|nikt0|NoGr(ou)?p|nSD|OFT|Pahe(\\.(ph|in))?|PATOMiEL|PRODJi|PSA|PTNK|RARBG|RDN|Rifftrax|RU4HD|SANTi|Scene|SHD|ShieldBearer|STUTTERSHIT|SUNSCREEN|TBS|TEKNO3D|Tigole|TIKO|VISIONPLUSHDR(-X|1000)?|WAF|WiKi|x0r|YIFY|YTS(.(MX|LT|AG))?|Zeus)\\b|\\b(VOST.*?FR(E|A)?|SUBFR(A|ENCH)?)\\b|\\b(-D3US|D3US-|DRX|E|Flights)\\b/in"
     },
     {
       "name": "Bad",
-      "pattern": "/\\b(?<=\\b[12]\\d{3}\\b).*\\b(Extras|Bonus|Extended[ ._-]Clip|Sing[-_. ]Along)\\b|\\bAV1\\b|\\b(\\$tore-Chill|0neshot|A-Destiny|AceAres|AhmadDev|AnimeDynastyEN|AnimeKuro|AnimeRG|Animesubs|AnimeTR|Anitsu|AniVoid|ArataEnc|AREY|ASW|BJX|BlackLuster|bonkai77|CameEsp|Cat66|CBBCerberus|CuaP|DARKFLiX|DBArabic|Deadmau[ .-]?[ .-]?RAWS|DKB|DP|DsunS|ExREN|(Baked|Dead|Space)Fish|FunArts|GERMini|Hakata[ .-]?Ramen|Hall_of_C|HAV1T|HENiL|HollowRoxas|ICEBLUE|iPUNISHER|JacobSwaggedUp|Johnny-englishsubs|Kanjouteki|KEKMASTERS|Kirion|KQRM|KRP|LoliHouse|M@nI|mal[ .-]lu[ .-]zen|Man\\.KMaximus|mdcx|Metaljerk|MGD|Mites|Modders[ .-]?Bay|Mr\\.Deadpool|NemDiggers|neoHEVC|Nokou|N[eo][wo]b[ ._-]?Subs|NS|Nyanpasu|OldCastle|phazer11|Plex[ .-]?Friendly|PnPSubs|Polarwindz|Project-gxs|PuyaSubs|QAS|QCE|Rando235Ranger|M2TS|BDMV|BDVD|Reaktor|RightShiftBy2|Rip[ .-]?Time|Salieri|Samir755|SanKyuu|sekkusu&ok|SHFS|shincaps|SLAX|SRW|SSA|StrayGods|TeamTurquoize|Tenrai[ .-]?Sensei|TnF|TOPKEK|U3-Web|Valenciano|VipapkStudios|WtF[ ._-]?Anime|xiao-av1|Yabai_Desu_NeRandomRemux|YakuboEncodes|youshikibi|YuiSubs|Anime[ .-]?(Chap|Land|Time)|Mini(Freeza|MTBB|sCuba|Theatre)|-(224|Ari|Cerberus|Cleo|Daddy(Subs)?|Emmid|FAV|Hatsuyuki|Hitoki|HR|Kallango|Maximus|MD|Pantsu|Pao|Pixel|Ranger|Rapta|Raze|SAD|SEiN|Sokudo|Suki[ .-]?Desu|Trix|UNBIASED|USD|Wardevil|Yun|zza))\\b|\\[(224|Ari|Cerberus|Cleo|Daddy(Subs)?|DB|Emmid|FAV|Hatsuyuki|Hitoku|HR|Kallango|Maximus|MD|Pantsu|Pao|Pixel|Ranger|Rapta|Raze|SAD|SEiN|Sokudo|Suki[ .-]?Desu|Trix|UNBIASED|uP|USD|Wardevil|Yun|zza)\\]|\\b(Asuka|Beatrice|Daddy|Fumi|Iriza|Kawaiika|Koi|Lilith|LowPower|Nanako|NC|neko|New|Ohys|Pandoratv|Scryous|Seicher|Shiniori)[ ._-]?(Raws)\\b|\\b(Moozzi2|Raws-Maji|ReinForce)\\b|\\[km\\]|-km\\b|\\b(alfaHD.*|BAT|BlackBit|BNd|C\\.A\\.A|Cory|EXTREME|FF|FOXX|G4RiS|GUEIRA|LCD|N3G4N|ONLYMOViE|PD|PTHome|RiPER|RK|SiGLA|Tars|tokar86a|TvR|vnlls|WTV|Yatogam1|YusukeFLA|ZigZag|ZNM)\\b|\\b(Golumpa|KamiFS|torenter69)\\b|\\[Yameii\\]|-Yameii\\b|^(?!.*(Dual|Multi)[-_. ]?Audio).*((?<!multi-)\\b(dub(bed)?)\\b|(funi|eng(lish)?)_?dub)|^(?!.*(dual[ ._-]?audio|(JA|ZH|KO)\\\\+EN|EN\\+(JA|ZH|KO))).*\\b(KaiDubs|KS)\\b|\\b(BiOMA|BiTOR|DepraveD|SasukeducK|tarunk9c|VD0N|VECTOR)\\b|\\b(BRiNK|BTM|CHX|CTFOH|d3g|DepraveD|EVO|Feranki1980|FGT|FMD|GHOSTS|HiQVE|iNTENSO|iVy|JFF|KC|MeGusta|nhanc3|OFT|Pahe(\\.(ph|in))?|PSA|SasukeducK|SHD|ShieldBearer|TBS|TG|VIDEOHOLE|worldmkv|XLF|Zero00)\\b|\\b(1XBET|2160p.*BiTOR|BEN[ ._-]THE[ ._-]MEN|CREATiVE24|Feranki1980|GalaxyRG|(?<!-)\\bjennaortega(UHD)?|READ(\\s|\\.)+NOTE|SWTYBLZ|TeeWee|TEKNO3D|Will1869)\\b|\\b(24xHD|41RGB|4K4U|AOC|AROMA|aXXo|AZAZE|BARC0DE|BAUCKLEY|BdC|beAst|BTM|C1NEM4|C4K|CDDHD|CHAOS|CHD|CiNE|COLLECTiVE|CREATiVE24|CrEwSaDe|CTFOH|d3g|DDR|DNL|EPiC|EuReKA|FaNGDiNG0|Feranki1980|FGT|FMD|FRDS|FZHD|GalaxyRG|GHD|GPTHD|HDHUB4U|HDS|HDT|HDTime|HDWinG|iNTENSO|iPlanet|iVy|jennaortega(UHD)?|JFF|KC|KiNGDOM|KIRA|L0SERNIGHT|LAMA|Leffe|Liber8|LiGaS|LUCY|MarkII|mHD|mSD|MTeam|MT|MySiLU|NhaNc3|nHD|nikt0|NoGr(ou)?p|nSD|OFT|Pahe(\\.(ph|in))?|PATOMiEL|PRODJi|PSA|PTNK|RARBG|RDN|Rifftrax|RU4HD|SANTi|Scene|SHD|ShieldBearer|STUTTERSHIT|SUNSCREEN|TBS|TEKNO3D|Tigole|TIKO|VISIONPLUSHDR(-X|1000)?|WAF|WiKi|x0r|YIFY|YTS(.(MX|LT|AG))?|Zeus)\\b|\\b(VOST.*?FR(E|A)?|SUBFR(A|ENCH)?)\\b|\\b(-D3US|D3US-|DRX|E|Flights)\\b/i"
+      "pattern": "/\\b(?<=\\b[12]\\d{3}\\b).*\\b(|Extras|Bonus|Extended[ ._-]Clip|Sing[-_. ]Along)\\b|\\bAV1\\b|\\b(\\$tore-Chill|0neshot|A-Destiny|AceAres|AhmadDev|AnimeDynastyEN|AnimeKuro|AnimeRG|Animesubs|AnimeTR|Anitsu|AniVoid|ArataEnc|AREY|ASW|BJX|BlackLuster|bonkai77|CameEsp|Cat66|CBBCerberus|CuaP|DARKFLiX|DBArabic|Deadmau[ .-]?[ .-]?RAWS|DKB|DP|DsunS|ExREN|(Baked|Dead|Space)Fish|FunArts|GERMini|Hakata[ .-]?Ramen|Hall_of_C|HAV1T|HENiL|HollowRoxas|ICEBLUE|iPUNISHER|JacobSwaggedUp|Johnny-englishsubs|Kanjouteki|KEKMASTERS|Kirion|KQRM|KRP|LoliHouse|M@nI|mal[ .-]lu[ .-]zen|Man\\.KMaximus|mdcx|Metaljerk|MGD|Mites|Modders[ .-]?Bay|Mr\\.Deadpool|NemDiggers|neoHEVC|Nokou|N[eo][wo]b[ ._-]?Subs|NS|Nyanpasu|OldCastle|phazer11|Plex[ .-]?Friendly|PnPSubs|Polarwindz|Project-gxs|PuyaSubs|QAS|QCE|Rando235Ranger|M2TS|BDMV|BDVD|Reaktor|RightShiftBy2|Rip[ .-]?Time|Salieri|Samir755|SanKyuu|sekkusu&ok|SHFS|shincaps|SLAX|SRW|SSA|StrayGods|TeamTurquoize|Tenrai[ .-]?Sensei|TnF|TOPKEK|U3-Web|Valenciano|VipapkStudios|WtF[ ._-]?Anime|xiao-av1|Yabai_Desu_NeRandomRemux|YakuboEncodes|youshikibi|YuiSubs|Anime[ .-]?(Chap|Land|Time)|Mini(Freeza|MTBB|sCuba|Theatre)|-(224|Ari|Cerberus|Cleo|Daddy(Subs)?|Emmid|FAV|Hatsuyuki|Hitoki|HR|Kallango|Maximus|MD|Pantsu|Pao|Pixel|Ranger|Rapta|Raze|SAD|SEiN|Sokudo|Suki[ .-]?Desu|Trix|UNBIASED|USD|Wardevil|Yun|zza))\\b|\\[(224|Ari|Cerberus|Cleo|Daddy(Subs)?|DB|Emmid|FAV|Hatsuyuki|Hitoku|HR|Kallango|Maximus|MD|Pantsu|Pao|Pixel|Ranger|Rapta|Raze|SAD|SEiN|Sokudo|Suki[ .-]?Desu|Trix|UNBIASED|uP|USD|Wardevil|Yun|zza)\\]|\\b(Asuka|Beatrice|Daddy|Fumi|Iriza|Kawaiika|Koi|Lilith|LowPower|Nanako|NC|neko|New|Ohys|Pandoratv|Scryous|Seicher|Shiniori)[ ._-]?(Raws)\\b|\\b(Moozzi2|Raws-Maji|ReinForce)\\b|\\[km\\]|-km\\b|\\b(alfaHD.*|BAT|BlackBit|BNd|C\\.A\\.A|Cory|EXTREME|FF|FOXX|G4RiS|GUEIRA|LCD|N3G4N|ONLYMOViE|PD|PTHome|RiPER|RK|SiGLA|Tars|tokar86a|TvR|vnlls|WTV|Yatogam1|YusukeFLA|ZigZag|ZNM)\\b|\\b(Golumpa|KamiFS|torenter69)\\b|\\[Yameii\\]|-Yameii\\b|^(?!.*(Dual|Multi)[-_. ]?Audio).*((?<!multi-)\\b(dub(bed)?)\\b|(funi|eng(lish)?)_?dub)|^(?!.*(dual[ ._-]?audio|(JA|ZH|KO)\\\\+EN|EN\\+(JA|ZH|KO))).*\\b(KaiDubs|KS)\\b|\\b(BiOMA|BiTOR|DepraveD|SasukeducK|tarunk9c|VD0N|VECTOR)\\b|\\b(BRiNK|BTM|CHX|CTFOH|d3g|DepraveD|EVO|Feranki1980|FGT|FMD|GHOSTS|HiQVE|iNTENSO|iVy|JFF|KC|MeGusta|nhanc3|OFT|Pahe(\\.(ph|in))?|PSA|SasukeducK|SHD|ShieldBearer|TBS|TG|VIDEOHOLE|worldmkv|XLF|Zero00)\\b|\\b(1XBET|2160p.*BiTOR|BEN[ ._-]THE[ ._-]MEN|CREATiVE24|Feranki1980|GalaxyRG|(?<!-)\\bjennaortega(UHD)?|READ(\\s|\\.)+NOTE|SWTYBLZ|TeeWee|TEKNO3D|Will1869)\\b|\\b(24xHD|41RGB|4K4U|AOC|AROMA|aXXo|AZAZE|BARC0DE|BAUCKLEY|BdC|beAst|BTM|C1NEM4|C4K|CDDHD|CHAOS|CHD|CiNE|COLLECTiVE|CREATiVE24|CrEwSaDe|CTFOH|d3g|DDR|DNL|EPiC|EuReKA|FaNGDiNG0|Feranki1980|FGT|FMD|FRDS|FZHD|GalaxyRG|GHD|GPTHD|HDHUB4U|HDS|HDT|HDTime|HDWinG|iNTENSO|iPlanet|iVy|jennaortega(UHD)?|JFF|KC|KiNGDOM|KIRA|L0SERNIGHT|LAMA|Leffe|Liber8|LiGaS|LUCY|MarkII|mHD|mSD|MTeam|MT|MySiLU|NhaNc3|nHD|nikt0|NoGr(ou)?p|nSD|OFT|Pahe(\\.(ph|in))?|PATOMiEL|PRODJi|PSA|PTNK|RARBG|RDN|Rifftrax|RU4HD|SANTi|Scene|SHD|ShieldBearer|STUTTERSHIT|SUNSCREEN|TBS|TEKNO3D|Tigole|TIKO|VISIONPLUSHDR(-X|1000)?|WAF|WiKi|x0r|YIFY|YTS(.(MX|LT|AG))?|Zeus)\\b|\\b(VOST.*?FR(E|A)?|SUBFR(A|ENCH)?)\\b|\\b(-D3US|D3US-|DRX|E|Flights)\\b/i"
     }
   ],
   "rpdbApiKey": "t0-free-rpdb",
-  "showStatistics": true,
+  "showStatistics": null,
   "titleMatching": {
     "mode": "contains",
     "enabled": false,
@@ -685,16 +742,6 @@
       "hideable": true,
       "searchable": true,
       "addonName": "TugaKids"
-    },
-    {
-      "id": "3d14414.torrentio-realdebrid",
-      "type": "other",
-      "name": "RealDebrid",
-      "onlyOnDiscover": true,
-      "rpdb": true,
-      "hideable": true,
-      "searchable": false,
-      "addonName": "Torrentio"
     },
     {
       "id": "275e3b0.kitsu-anime-trending",
@@ -776,7 +823,7 @@
       "addonName": "USA TV"
     },
     {
-      "id": "acce3b0.yt_id::ytsearch100:video",
+      "id": "acce3b0.yt_id::ytsearch",
       "type": "YouTube",
       "name": "Video",
       "rpdb": true,
@@ -785,13 +832,103 @@
       "addonName": "Youtubio"
     },
     {
-      "id": "acce3b0.yt_id::ytsearch100:channel",
+      "id": "acce3b0.yt_id::ytsearch:channel",
       "type": "YouTube",
       "name": "Channel",
       "rpdb": true,
       "hideable": false,
       "searchable": false,
       "addonName": "Youtubio"
+    },
+    {
+      "id": "b31e3b0.recent",
+      "type": "movie",
+      "name": "Hanime Recent",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "HiAnime"
+    },
+    {
+      "id": "b31e3b0.mostlikes",
+      "type": "movie",
+      "name": "Hanime Most likes",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "HiAnime"
+    },
+    {
+      "id": "b31e3b0.mostviews",
+      "type": "movie",
+      "name": "Hanime Most Views",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "HiAnime"
+    },
+    {
+      "id": "b31e3b0.newset",
+      "type": "movie",
+      "name": "Hanime Newset",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "HiAnime"
+    },
+    {
+      "id": "3d1791b.torrentio-torbox-torrents",
+      "type": "other",
+      "name": "TorBox Torrents",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Torrentio"
+    },
+    {
+      "id": "3d1791b.torrentio-torbox-usenet",
+      "type": "other",
+      "name": "TorBox Usenet",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Torrentio"
+    },
+    {
+      "id": "3d1791b.torrentio-torbox-webdl",
+      "type": "other",
+      "name": "TorBox WebDL",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Torrentio"
+    },
+    {
+      "id": "904791b.torbox_watchlist_movies",
+      "type": "movie",
+      "name": "TRB Watchlist",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "MediaFusion"
+    },
+    {
+      "id": "904791b.torbox_watchlist_series",
+      "type": "series",
+      "name": "TRB Watchlist",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "MediaFusion"
+    },
+    {
+      "id": "d57e3b0.user-movies",
+      "type": "movie",
+      "name": "Your Media",
+      "rpdb": true,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "TorBox"
     }
   ]
 }
