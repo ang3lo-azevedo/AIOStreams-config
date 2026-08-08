@@ -296,6 +296,11 @@ fi
 
 # Não é mais necessário remover campos, pois não são mais gerados
 
+# Limit preferredRegexPatterns to 25 (AIOStreams validation constraint)
+TMP_FILE2=$(mktemp)
+jq 'if .preferredRegexPatterns then .preferredRegexPatterns = (.preferredRegexPatterns | if length > 25 then .[0:25] else . end) else . end' "$TMP_FILE" > "$TMP_FILE2"
+mv "$TMP_FILE2" "$TMP_FILE"
+
 # Validate the resulting JSON
 if jq empty "$TMP_FILE" 2>/dev/null; then
     print_status "JSON validation successful"
